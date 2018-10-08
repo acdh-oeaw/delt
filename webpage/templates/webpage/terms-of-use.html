@@ -1,0 +1,41 @@
+{% extends "webpage/base.html" %}
+{% load staticfiles %}
+{% load webpage_extras %}
+{% block title %} Terms of Use {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="card-title">Terms of Use</h1>
+        </div>
+        <div class="card-body">
+            <div>
+                <ol>
+                    <li>
+                        The corpora drawn from DELT are EXCLUSIVELY available to be used for non-commercial research and educational purposes.
+                    </li>
+                    <li>
+                        DELT is available free of charge to researchers and students adhering to the conditions of use
+                    </li>
+                    <li>
+                        All publications on research partly or wholly based on the corpus should acknowledge the source of data as follows:
+                        <blockquote class="blockquote">
+                            <p class="mb-0">Database of English Learner Texts (DELT). 2007-. Compiled by the Centre for English Language Teaching. https://delt.acdh.oeaw.ac.at
+                            Users are encouraged to inform the CELT when they have published or presented work based on/referring to DELT (mailto: celt@univie.ac.at))</p>
+                        </blockquote>
+                    </li>
+                    <li>
+                        No part of the corpus is to be distributed to a third party without specific and written authorization from CELT.
+                    </li>
+                    <li>
+                        The corpus can only be used by the registered user and researchers working in close collaboration with him/her or students under his/her supervision, attached to the same institution
+                    </li>
+                    <li>
+                        Under no circumstances, including, but not limited to, negligence, shall the creators of DELT or the University be liable for any special or consequential damages that result from the use of or the inability to use the DELT files.
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
