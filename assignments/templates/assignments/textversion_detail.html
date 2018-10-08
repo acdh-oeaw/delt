@@ -1,0 +1,144 @@
+{% extends "webpage/base.html" %}
+{% load webpage_extras %}
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-header procustom-panel-heading">
+            <div class="row">
+                <div class="col-md-2">
+                    {% if object.get_prev %}
+                        <h2>
+                            <a href="{% url 'assignments:textversion_detail' pk=object.get_prev %}">
+                                <i class="fas fa-chevron-left" title="previous"></i>
+                            </a>
+                        </h2>
+                    {% endif %}
+                </div>
+                <div class="col-md-8">
+                    <h1 style="text-align: center;">
+                        <small>Text Version:</small> {{ object }}
+                        {% if user.is_authenticated %}
+                            <small>
+                                <a href="{% url 'assignments:textversion_edit' pk=object.id %}">
+                                    <i class="far fa-edit" title="edit"></i>
+                                </a>
+                            </small>
+                            |
+                            <small>
+                                <a href="{% url 'assignments:textversion_delete' pk=object.id %}">
+                                    <i class="far fa-trash-alt" title="delete"></i>
+                                </a>
+                            </small>
+                        {% endif %}
+                    </h1>
+                </div>
+            <div class="col-md-2">
+                <h2>
+                    {% if object.get_next %}
+                    <a href="{% url 'assignments:textversion_detail' pk=object.get_next %}" style="float:right">
+                        <i class="fas fa-chevron-right" title="next"></i>
+                    </a>
+                </h2>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+        <div class="card-body">
+            <legend>
+                Info
+            </legend>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>
+                        {% get_verbose_name textversion "text_id" %}
+                    </th>
+                    <td>
+                        <a href="{{ object.text_id.get_absolute_url }}">
+                            {{ object.text_id }}
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name textversion "status" %}
+                    </th>
+                    <td>
+                        {{ object.status }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name textversion "link" %}
+                    </th>
+                    <td>
+                        {{ object.link }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name textversion "content" %}
+                    </th>
+                    <td>
+                        {{ object.content|safe }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name textversion "content" %}
+                    </th>
+                    <td>
+                        <code>
+                            {{ object.content }}
+                        </code>
+                    </td>
+                </tr>
+            </table>
+            <legend>
+                internal info
+            </legend>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>
+                        {% get_verbose_name textversion "legacy_id" %}
+                    </th>
+                    <td>
+                        {{ object.legacy_id }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name textversion "entered_by" %}
+                    </th>
+                    <td>
+                        {{ object.entered_by }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name textversion "entered_date" %}
+                    </th>
+                    <td>
+                        {{ object.entered_date }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name textversion "last_changed" %}
+                    </th>
+                    <td>
+                        {{ object.last_changed }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name textversion "notes" %}
+                    </th>
+                    <td>
+                        {{ object.notes }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

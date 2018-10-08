@@ -1,0 +1,305 @@
+{% extends "webpage/base.html" %}
+{% load webpage_extras %}
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-header procustom-panel-heading">
+            <div class="row">
+                <div class="col-md-2">
+                    {% if object.get_prev %}
+                        <h2>
+                            <a href="{% url 'assignments:text_detail' pk=object.get_prev %}">
+                                <i class="fas fa-chevron-left" title="previous"></i>
+                            </a>
+                        </h2>
+                    {% endif %}
+                </div>
+                <div class="col-md-8">
+                    <h1 style="text-align: center;">
+                        <small>Text:</small> {{ object }}
+                        {% if user.is_authenticated %}
+                            <small>
+                                <a href="{% url 'assignments:text_edit' pk=object.id %}">
+                                    <i class="far fa-edit" title="edit"></i>
+                                </a>
+                            </small>
+                            |
+                            <small>
+                                <a href="{% url 'assignments:text_delete' pk=object.id %}">
+                                    <i class="far fa-trash-alt" title="delete"></i>
+                                </a>
+                            </small>
+                        {% endif %}
+                    </h1>
+                </div>
+            <div class="col-md-2">
+                <h2>
+                    {% if object.get_next %}
+                    <a href="{% url 'assignments:text_detail' pk=object.get_next %}" style="float:right">
+                        <i class="fas fa-chevron-right" title="next"></i>
+                    </a>
+                </h2>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+        <div class="card-body">
+            <legend>
+                Info
+            </legend>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>
+                        {% get_verbose_name text "participant_id" %}
+                    </th>
+                    <td>
+                        {{ object.participant_id }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "text_type" %}
+                    </th>
+                    <td>
+                        {{ object.text_type }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "assignment_id" %}
+                    </th>
+                    <td>
+                        <a href="{{ object.assignment_id.get_absolute_url }}">
+                            {{ object.assignment_id }}
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "availability" %}
+                    </th>
+                    <td>
+                        {{ object.availability }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "year" %}
+                    </th>
+                    <td>
+                        {{ object.year }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "semester" %}
+                    </th>
+                    <td>
+                        {{ object.semester }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "lang" %}
+                    </th>
+                    <td>
+                        {{ object.lang }} - MISTAKE IN IMPORT SCRIPT
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "medium" %}
+                    </th>
+                    <td>
+                        {{ object.medium }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "data_type" %}
+                    </th>
+                    <td>
+                        {{ object.data_type }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "recording" %}
+                    </th>
+                    <td>
+                        {{ object.recording }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "recoding_method" %}
+                    </th>
+                    <td>
+                        {{ object.recoding_method }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "mode" %}
+                    </th>
+                    <td>
+                        {{ object.mode }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "clil_text" %}
+                    </th>
+                    <td>
+                        {{ object.clil_text }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "clil_subject" %}
+                    </th>
+                    <td>
+                        {{ object.clil_subject }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "timed" %}
+                    </th>
+                    <td>
+                        {{ object.timed }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "exam" %}
+                    </th>
+                    <td>
+                        {{ object.exam }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "planning_time" %}
+                    </th>
+                    <td>
+                        {{ object.planning_time }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "tool" %}
+                    </th>
+                    <td>
+                        {{ object.tool }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "grade" %}
+                    </th>
+                    <td>
+                        {{ object.grade }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "title" %}
+                    </th>
+                    <td>
+                        {{ object.title }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "source" %}
+                    </th>
+                    <td>
+                        {{ object.source }}
+                    </td>
+                </tr>
+                {% if object.transcriber %}
+                    <tr>
+                        <th>
+                            {% get_verbose_name text "transcriber" %}
+                        </th>
+                        <td>
+                            <a href="{{ object.transcriber.get_absolute_url }}">
+                                {{ object.transcriber }}
+                            </a>
+                        </td>
+                    </tr>
+                {% endif %}
+                {% if object.has_text_version.all %}
+                    <tr>
+                        <th>
+                            related text versions
+                        </th>
+                        <td>
+                            {% for x in object.has_text_version.all %}
+                                <li>
+                                    <a href="{{ x.get_absolute_url }}">{{ x }}</a>
+                                </li>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                {% endif %}
+            </table>
+
+
+
+
+
+
+
+
+
+            <legend>
+                internal info
+            </legend>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>
+                        {% get_verbose_name text "legacy_id" %}
+                    </th>
+                    <td>
+                        {{ object.legacy_id }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "entered_by" %}
+                    </th>
+                    <td>
+                        {{ object.entered_by }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "entered_date" %}
+                    </th>
+                    <td>
+                        {{ object.entered_date }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "last_changed" %}
+                    </th>
+                    <td>
+                        {{ object.last_changed }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {% get_verbose_name text "notes" %}
+                    </th>
+                    <td>
+                        {{ object.notes }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
