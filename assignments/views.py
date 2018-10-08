@@ -7,7 +7,7 @@ from django.utils.decorators import method_decorator
 
 from django_tables2 import RequestConfig
 
-from webpage.utils import GenericListView, BaseCreateView, BaseUpdateView
+from browsing.browsing_utils import GenericListView, BaseCreateView, BaseUpdateView
 
 from .models import *
 from .tables import *
