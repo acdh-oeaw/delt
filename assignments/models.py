@@ -482,6 +482,9 @@ class Participant(AssignmentBaseClass):
 
 
 class Text(AssignmentBaseClass):
+
+    """Main table including information about the text"""
+
     participant_id = models.ForeignKey(
         Participant, null=True, blank=True,
         verbose_name="participant_id",
@@ -504,37 +507,43 @@ class Text(AssignmentBaseClass):
         on_delete=models.SET_NULL
     )
     availability = models.CharField(
-        max_length=250, blank=True, verbose_name="availability",
-        help_text="provide some",
+        max_length=250, blank=True, verbose_name="Profile(s) signed?",
+        help_text="Profile(s) signed?",
         choices=YES_NO_OTHER
     )
     year = models.IntegerField(
-        blank=True, null=True, verbose_name="Year of Text",
-        help_text="provide some"
+        blank=True, null=True, verbose_name="Year the text was produced",
+        help_text="(e.g. 2007 = 2007/2008; W2007 = September 2007-Febuary 2008;\
+        S2008 = March 2008 - August 2008)"
     )
     semester = models.CharField(
-        max_length=250, blank=True, verbose_name="text_semester",
-        help_text="provide some",
+        max_length=250, blank=True, verbose_name="Semester",
+        help_text="w=winter semester (September-February);\
+        s=summer semester (March-August);\
+        (e.g. 2007 = 2007/2008; W2007 = September 2007-Febuary 2008;\
+        S2008 = March 2008 - August 2008)",
         choices=SEMESTER
     )
     lang = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="text_lang",
-        help_text="provide some",
+        verbose_name="Language the text is written/spoken in",
+        help_text="Language the text is written/spoken in",
         related_name="is_text_lang",
         on_delete=models.SET_NULL
     )
     medium = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="text_medium",
-        help_text="provide some",
+        verbose_name="Medium: spoken, written, CMC",
+        help_text="CMC (=computer mediated communication)",
         related_name="is_text_medium",
         on_delete=models.SET_NULL
     )
     data_type = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="data_type",
-        help_text="provide some",
+        verbose_name="Type of samples",
+        help_text="Type of samples (cf. Ellis & Barkhuizen):\
+        naturally occurring, clinically elicited,\
+        experimentally elicited",
         related_name="is_data_type",
         on_delete=models.SET_NULL
     )
@@ -547,65 +556,69 @@ class Text(AssignmentBaseClass):
     )
     recoding_method = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="recoding_method",
-        help_text="provide some",
+        verbose_name="Recording method used ",
+        help_text="audio/video",
         related_name="is_recoding_method",
         on_delete=models.SET_NULL
     )
     mode = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="text_mode",
-        help_text="provide some",
+        verbose_name="Mode of writing",
+        help_text="argumentative, descriptive, expository, narrative; other",
         related_name="is_text_mode",
         on_delete=models.SET_NULL
     )
     clil_text = models.CharField(
-        max_length=250, blank=True, verbose_name="clil_text",
-        help_text="provide some",
+        max_length=250, blank=True, verbose_name="Produced in a CLIL context",
+        help_text="E.g. a recording of a biology course taught in English)",
         choices=YES_NO_OTHER
     )
     clil_subject = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="clil_subject",
-        help_text="provide some",
+        verbose_name="Subject taught through CLIL",
+        help_text="Subject taught through CLIL",
         related_name="is_clil_subject",
         on_delete=models.SET_NULL
     )
     timed = models.CharField(
-        max_length=250, blank=True, verbose_name="timed",
-        help_text="provide some",
+        max_length=250, blank=True,
+        verbose_name="Produced in a timed context?",
+        help_text="Produced in a timed context?",
         choices=YES_NO_OTHER
     )
     exam = models.CharField(
-        max_length=250, blank=True, verbose_name="exam",
-        help_text="provide some",
+        max_length=250, blank=True, verbose_name="Produced in an exam?",
+        help_text="Produced in an exam?",
         choices=YES_NO_OTHER
     )
     planning_time = models.CharField(
-        max_length=250, blank=True, verbose_name="planning_time",
-        help_text="provide some",
-        choices=YES_NO_OTHER
-    )
-    tool = models.CharField(
-        max_length=250, blank=True, verbose_name="tool",
-        help_text="provide some",
+        max_length=250, blank=True, verbose_name="planned; unplanned; unknown",
+        help_text="only relevant for spoken texts; written texts: always mark 'unknown';\
+        (e.g. Did the speakers have time to think about what they were going to say beforehand?)",
         choices=YES_NO_OTHER
     )
     grade = models.IntegerField(
-        blank=True, null=True, verbose_name="text_grade",
-        help_text="provide some"
+        blank=True, null=True, verbose_name="Grade, if available e",
+        help_text="scale 1-5, convert different grading schemes"
+    )
+    tool = models.CharField(
+        max_length=250, blank=True, verbose_name="Were tools used? ",
+        help_text="(yes; no; unknown)",
+        choices=YES_NO_OTHER
     )
     title = models.CharField(
-        max_length=250, blank=True, verbose_name="text_title",
-        help_text="provide some"
+        max_length=250, blank=True, verbose_name="Text title",
+        help_text="If available and different from assignment title\
+        (the title is also included in the text itself, where it is tagged as 'head')"
     )
     source = models.CharField(
-        max_length=250, blank=True, verbose_name="text_source",
-        help_text="provide some"
+        max_length=250, blank=True, verbose_name="Text source ",
+        help_text="handwritten / born digital / recording_audio / recording_video"
     )
     transcriber = models.ForeignKey(
         Person, null=True, blank=True,
-        help_text="transcriber",
+        verbose_name="Transcriber of spoken or handwritten data",
+        help_text="Transcriber of spoken or handwritten data",
         related_name="has_transcribed_text",
         on_delete=models.SET_NULL
     )
