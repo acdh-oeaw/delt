@@ -9,10 +9,10 @@ from django_tables2 import RequestConfig
 
 from browsing.browsing_utils import GenericListView, BaseCreateView, BaseUpdateView
 
-from .models import *
-from .tables import *
-from .filters import *
-from .forms import *
+from . models import *
+from . tables import *
+from . filters import *
+from . forms import *
 
 
 class AssignmentListView(GenericListView):
@@ -236,3 +236,72 @@ class TextVersionDelete(DeleteView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(TextVersionDelete, self).dispatch(*args, **kwargs)
+
+
+class LearnerListView(GenericListView):
+    model = Learner
+    table_class = LearnerTable
+    filter_class = LearnerListFilter
+    formhelper_class = LearnerFilterFormHelper
+    init_columns = [
+        'id',
+        'title',
+    ]
+
+    def get_all_cols(self):
+        all_cols = list(self.table_class.base_columns.keys())
+        return all_cols
+
+    def get_context_data(self, **kwargs):
+        context = super(LearnerListView, self).get_context_data()
+        context[self.context_filter_name] = self.filter
+        togglable_colums = [x for x in self.get_all_cols() if x not in self.init_columns]
+        context['togglable_colums'] = togglable_colums
+        return context
+
+    def get_table(self, **kwargs):
+        table = super(GenericListView, self).get_table()
+        RequestConfig(self.request, paginate={
+            'page': 1, 'per_page': self.paginate_by
+        }).configure(table)
+        default_cols = self.init_columns
+        all_cols = self.get_all_cols()
+        selected_cols = self.request.GET.getlist("columns") + default_cols
+        exclude_vals = [x for x in all_cols if x not in selected_cols]
+        table.exclude = exclude_vals
+        return table
+
+
+class LearnerDetailView(DetailView):
+    model = Learner
+    template_name = 'browsing/generic_detail.html'
+
+
+class LearnerCreate(BaseCreateView):
+
+    model = Learner
+    form_class = LearnerForm
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(LearnerCreate, self).dispatch(*args, **kwargs)
+
+
+class LearnerUpdate(BaseUpdateView):
+
+    model = Learner
+    form_class = LearnerForm
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(LearnerUpdate, self).dispatch(*args, **kwargs)
+
+
+class LearnerDelete(DeleteView):
+    model = Learner
+    template_name = 'webpage/confirm_delete.html'
+    success_url = reverse_lazy('assignments:browse_learners')
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(LearnerDelete, self).dispatch(*args, **kwargs)

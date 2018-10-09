@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from idprovider.models import IdProvider
 from vocabs.models import SkosConcept
+from browsing.browsing_utils import model_to_dict
 
 GENDER_CHOICES = (
     ('male', 'male'),
@@ -81,6 +82,9 @@ class AssignmentBaseClass(IdProvider):
         blank=True, null=True, verbose_name="Learners Note",
         help_text="provide some"
     )
+
+    def field_dict(self):
+        return model_to_dict(self)
 
 
 class Assignment(AssignmentBaseClass):
@@ -192,6 +196,43 @@ class Learner(AssignmentBaseClass):
     def __str__(self):
         return "{}".format(self.id)
 
+    @classmethod
+    def get_listview_url(self):
+        return reverse('assignments:browse_learners')
+
+    @classmethod
+    def get_createview_url(self):
+        return reverse('assignments:learner_create')
+
+    def get_absolute_url(self):
+        return reverse('assignments:learner_detail', kwargs={'pk': self.id})
+
+    def get_absolute_url(self):
+        return reverse('assignments:learner_detail', kwargs={'pk': self.id})
+
+    def get_delete_url(self):
+        return reverse('assignments:learner_delete', kwargs={'pk': self.id})
+
+    def get_edit_url(self):
+        return reverse('assignments:learner_edit', kwargs={'pk': self.id})
+
+    def get_next(self):
+        next = self.__class__.objects.filter(id__gt=self.id)
+        if next:
+            return reverse(
+                'assignments:learner_detail',
+                kwargs={'pk': next.first().id}
+            )
+        return False
+
+    def get_prev(self):
+        prev = self.__class__.objects.filter(id__lt=self.id).order_by('-id')
+        if prev:
+            return reverse(
+                'assignments:learner_detail',
+                kwargs={'pk': prev.first().id}
+            )
+        return False
 
 class LearnerProfile(AssignmentBaseClass):
 

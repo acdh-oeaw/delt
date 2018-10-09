@@ -31,4 +31,13 @@ urlpatterns = [
         name='textversion_edit'),
     url(r'^textversion/create/$', views.TextVersionCreate.as_view(),
         name='textversion_create'),
+    url(r'^learners/$', views.LearnerListView.as_view(), name='browse_learners'),
+    url(r'^learner/detail/(?P<pk>[0-9]+)$', views.LearnerDetailView.as_view(),
+        name='learner_detail'),
+    url(r'^learner/delete/(?P<pk>[0-9]+)$', views.LearnerDelete.as_view(),
+        name='learner_delete'),
+    url(r'^learner/edit/(?P<pk>[0-9]+)$', views.LearnerUpdate.as_view(),
+        name='learner_edit'),
+    url(r'^learner/create/$', views.LearnerCreate.as_view(),
+        name='learner_create'),
 ]

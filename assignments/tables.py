@@ -64,3 +64,16 @@ class TextVersionTable(tables.Table):
             'status',
         )
         attrs = {"class": "table table-responsive table-hover"}
+
+
+class LearnerTable(tables.Table):
+    id = tables.LinkColumn()
+
+    class Meta:
+        model = Learner
+        sequence = (
+            'id',
+            'year_of_birth',
+            'gender',
+        )
+        attrs = {"class": "table table-responsive table-hover"}

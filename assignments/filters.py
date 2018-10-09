@@ -1,6 +1,6 @@
 import django_filters
 
-from .models import Assignment, Text, TextVersion
+from . models import *
 
 
 class AssignmentListFilter(django_filters.FilterSet):
@@ -41,4 +41,11 @@ class TextVersionListFilter(django_filters.FilterSet):
 
     class Meta:
         model = TextVersion
+        fields = "__all__"
+
+
+class LearnerListFilter(django_filters.FilterSet):
+
+    class Meta:
+        model = Learner
         fields = "__all__"
