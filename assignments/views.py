@@ -347,7 +347,7 @@ class LearnerProfileListView(GenericListView):
 
 class LearnerProfileDetailView(DetailView):
     model = LearnerProfile
-    template_name = 'assignments/text_detail.html'
+    template_name = 'browsing/generic_detail.html'
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
