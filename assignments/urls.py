@@ -62,4 +62,15 @@ urlpatterns = [
         name='coursegroup_edit'),
     url(r'^coursegroup/create/$', views.CourseGroupCreate.as_view(),
         name='coursegroup_create'),
+    url(r'^participants/$',
+        views.ParticipantListView.as_view(), name='browse_participants'
+        ),
+    url(r'^participant/detail/(?P<pk>[0-9]+)$', views.ParticipantDetailView.as_view(),
+        name='participant_detail'),
+    url(r'^participant/delete/(?P<pk>[0-9]+)$', views.ParticipantDelete.as_view(),
+        name='participant_delete'),
+    url(r'^participant/edit/(?P<pk>[0-9]+)$', views.ParticipantUpdate.as_view(),
+        name='participant_edit'),
+    url(r'^participant/create/$', views.ParticipantCreate.as_view(),
+        name='participant_create'),
 ]

@@ -538,6 +538,44 @@ class Participant(AssignmentBaseClass):
         choices=YES_NO_OTHER
     )
 
+    @classmethod
+    def get_listview_url(self):
+        return reverse('assignments:browse_participants')
+
+    @classmethod
+    def get_createview_url(self):
+        return reverse('assignments:participant_create')
+
+    def get_absolute_url(self):
+        return reverse('assignments:participant_detail', kwargs={'pk': self.id})
+
+    def get_absolute_url(self):
+        return reverse('assignments:participant_detail', kwargs={'pk': self.id})
+
+    def get_delete_url(self):
+        return reverse('assignments:participant_delete', kwargs={'pk': self.id})
+
+    def get_edit_url(self):
+        return reverse('assignments:participant_edit', kwargs={'pk': self.id})
+
+    def get_next(self):
+        next = self.__class__.objects.filter(id__gt=self.id)
+        if next:
+            return reverse(
+                'assignments:participant_detail',
+                kwargs={'pk': next.first().id}
+            )
+        return False
+
+    def get_prev(self):
+        prev = self.__class__.objects.filter(id__lt=self.id).order_by('-id')
+        if prev:
+            return reverse(
+                'assignments:participant_detail',
+                kwargs={'pk': prev.first().id}
+            )
+        return False
+
     def __str__(self):
         return "{}".format(self.learner_id)
 
