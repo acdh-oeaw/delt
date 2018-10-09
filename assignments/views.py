@@ -305,3 +305,80 @@ class LearnerDelete(DeleteView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(LearnerDelete, self).dispatch(*args, **kwargs)
+
+
+class LearnerProfileListView(GenericListView):
+    model = LearnerProfile
+    table_class = LearnerProfileTable
+    filter_class = LearnerProfileListFilter
+    formhelper_class = LearnerProfileFilterFormHelper
+    init_columns = [
+        'id',
+        'type',
+    ]
+
+    def get_all_cols(self):
+        all_cols = list(self.table_class.base_columns.keys())
+        return all_cols
+
+    def get_context_data(self, **kwargs):
+        context = super(LearnerProfileListView, self).get_context_data()
+        context[self.context_filter_name] = self.filter
+        togglable_colums = [x for x in self.get_all_cols() if x not in self.init_columns]
+        context['togglable_colums'] = togglable_colums
+        return context
+
+    def get_table(self, **kwargs):
+        table = super(GenericListView, self).get_table()
+        RequestConfig(self.request, paginate={
+            'page': 1, 'per_page': self.paginate_by
+        }).configure(table)
+        default_cols = self.init_columns
+        all_cols = self.get_all_cols()
+        selected_cols = self.request.GET.getlist("columns") + default_cols
+        exclude_vals = [x for x in all_cols if x not in selected_cols]
+        table.exclude = exclude_vals
+        return table
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(LearnerProfileListView, self).dispatch(*args, **kwargs)
+
+
+class LearnerProfileDetailView(DetailView):
+    model = LearnerProfile
+    template_name = 'assignments/text_detail.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(LearnerProfileDetailView, self).dispatch(*args, **kwargs)
+
+
+class LearnerProfileCreate(BaseCreateView):
+
+    model = LearnerProfile
+    form_class = LearnerProfileForm
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(LearnerProfileCreate, self).dispatch(*args, **kwargs)
+
+
+class LearnerProfileUpdate(BaseUpdateView):
+
+    model = LearnerProfile
+    form_class = LearnerProfileForm
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(LearnerProfileUpdate, self).dispatch(*args, **kwargs)
+
+
+class LearnerProfileDelete(DeleteView):
+    model = LearnerProfile
+    template_name = 'webpage/confirm_delete.html'
+    success_url = reverse_lazy('assignments:browse_texts')
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(LearnerProfileDelete, self).dispatch(*args, **kwargs)

@@ -49,3 +49,10 @@ class LearnerListFilter(django_filters.FilterSet):
     class Meta:
         model = Learner
         fields = "__all__"
+
+
+class LearnerProfileListFilter(django_filters.FilterSet):
+
+    class Meta:
+        model = LearnerProfile
+        fields = "__all__"

@@ -234,6 +234,7 @@ class Learner(AssignmentBaseClass):
             )
         return False
 
+
 class LearnerProfile(AssignmentBaseClass):
 
     """Background information about the learner which is subject to change;
@@ -352,6 +353,44 @@ class LearnerProfile(AssignmentBaseClass):
         verbose_name="Description of stays in English-speaking countries",
         help_text="When? How long? Where? What?; format: 2005/2006 - 10 months - London - Au Pair"
     )
+
+    @classmethod
+    def get_listview_url(self):
+        return reverse('assignments:browse_learnerprofiles')
+
+    @classmethod
+    def get_createview_url(self):
+        return reverse('assignments:learnerprofile_create')
+
+    def get_absolute_url(self):
+        return reverse('assignments:learnerprofile_detail', kwargs={'pk': self.id})
+
+    def get_absolute_url(self):
+        return reverse('assignments:learnerprofile_detail', kwargs={'pk': self.id})
+
+    def get_delete_url(self):
+        return reverse('assignments:learnerprofile_delete', kwargs={'pk': self.id})
+
+    def get_edit_url(self):
+        return reverse('assignments:learnerprofile_edit', kwargs={'pk': self.id})
+
+    def get_next(self):
+        next = self.__class__.objects.filter(id__gt=self.id)
+        if next:
+            return reverse(
+                'assignments:learnerprofile_detail',
+                kwargs={'pk': next.first().id}
+            )
+        return False
+
+    def get_prev(self):
+        prev = self.__class__.objects.filter(id__lt=self.id).order_by('-id')
+        if prev:
+            return reverse(
+                'assignments:learnerprofile_detail',
+                kwargs={'pk': prev.first().id}
+            )
+        return False
 
 
 class CourseGroup(AssignmentBaseClass):

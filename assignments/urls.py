@@ -40,4 +40,15 @@ urlpatterns = [
         name='learner_edit'),
     url(r'^learner/create/$', views.LearnerCreate.as_view(),
         name='learner_create'),
+    url(r'^learnerprofiles/$',
+        views.LearnerProfileListView.as_view(), name='browse_learnerprofiles'
+        ),
+    url(r'^learnerprofile/detail/(?P<pk>[0-9]+)$', views.LearnerProfileDetailView.as_view(),
+        name='learnerprofile_detail'),
+    url(r'^learnerprofile/delete/(?P<pk>[0-9]+)$', views.LearnerProfileDelete.as_view(),
+        name='learnerprofile_delete'),
+    url(r'^learnerprofile/edit/(?P<pk>[0-9]+)$', views.LearnerProfileUpdate.as_view(),
+        name='learnerprofile_edit'),
+    url(r'^learnerprofile/create/$', views.LearnerProfileCreate.as_view(),
+        name='learnerprofile_create'),
 ]
