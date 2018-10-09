@@ -499,42 +499,55 @@ INSTITUTION_LEVEL = (
 
 
 class Participant(AssignmentBaseClass):
+
+    """participant (= “virtual” participant); this table provides for the possibility to choose
+    between a “group” and a “learner” as being responsible for the text production;
+    it also allows for the correlation of a particular learner profile;
+    the participant is also linked to the tbl_institution;"""
+
     learner_id = models.ForeignKey(
         Learner, null=True, blank=True,
-        verbose_name="learner_id",
-        help_text="provide some",
+        verbose_name="Learner ID",
+        help_text="If the text is produced by an individual, LEARNER_ID is filled in\
+        and GROUP_ID is optional (e.g. if a student produces a text individually,\
+        but is a member of a particular course, both are filled in",
         related_name="has_learner",
         on_delete=models.SET_NULL
     )
     learner_profile_id = models.ForeignKey(
         LearnerProfile, null=True, blank=True,
-        verbose_name="learner_profile_id",
-        help_text="provide some",
+        verbose_name="Learner Profile ID",
+        help_text="If there is more than one profile, choose the one that corresponds to the time\
+        the text was produced, i.e. usually the latest one",
         related_name="has_learner",
         on_delete=models.SET_NULL
     )
     group_id = models.ForeignKey(
         CourseGroup, null=True, blank=True,
-        verbose_name="GROUP_ID",
-        help_text="provide some",
+        verbose_name="Group ID",
+        help_text="If the text is produced by a group, only GROUP_ID is filled in; members of a\
+        group that produced a text collectively are recorded in tbl_group_members;",
         related_name="has_participant",
         on_delete=models.SET_NULL
     )
     institution_id = models.ForeignKey(
         Institution, null=True, blank=True,
-        verbose_name="Institution",
-        help_text="provide some",
+        verbose_name="Institution ID",
+        help_text="Institution ID",
         related_name="has_participant",
         on_delete=models.SET_NULL
     )
     institution_level = models.CharField(
-        max_length=250, blank=True, verbose_name="institution_level",
-        help_text="provide some",
+        max_length=250, blank=True,
+        verbose_name="'Level' of the educational institution currently attended ",
+        help_text="primary(PR); lower_secondary(LS); upper_secondary(US); tertiary_university(TU);\
+        tertiary_college(TC); further_education(FE)",
         choices=INSTITUTION_LEVEL
     )
     clil = models.CharField(
-        max_length=250, blank=True, verbose_name="clil",
-        help_text="provide some",
+        max_length=250, blank=True,
+        verbose_name="Is this a CLIL-participant",
+        help_text="A group or an individual learner currently learning in a CLIL context?",
         choices=YES_NO_OTHER
     )
 
