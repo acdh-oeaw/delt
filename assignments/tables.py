@@ -88,3 +88,14 @@ class LearnerProfileTable(tables.Table):
             'id',
         )
         attrs = {"class": "table table-responsive table-hover"}
+
+
+class CourseGroupTable(tables.Table):
+    id = tables.LinkColumn()
+
+    class Meta:
+        model = CourseGroup
+        sequence = (
+            'id',
+        )
+        attrs = {"class": "table table-responsive table-hover"}

@@ -446,6 +446,44 @@ class CourseGroup(AssignmentBaseClass):
         verbose_name="group_notes", help_text="provide some"
     )
 
+    @classmethod
+    def get_listview_url(self):
+        return reverse('assignments:browse_coursegroups')
+
+    @classmethod
+    def get_createview_url(self):
+        return reverse('assignments:coursegroup_create')
+
+    def get_absolute_url(self):
+        return reverse('assignments:coursegroup_detail', kwargs={'pk': self.id})
+
+    def get_absolute_url(self):
+        return reverse('assignments:coursegroup_detail', kwargs={'pk': self.id})
+
+    def get_delete_url(self):
+        return reverse('assignments:coursegroup_delete', kwargs={'pk': self.id})
+
+    def get_edit_url(self):
+        return reverse('assignments:coursegroup_edit', kwargs={'pk': self.id})
+
+    def get_next(self):
+        next = self.__class__.objects.filter(id__gt=self.id)
+        if next:
+            return reverse(
+                'assignments:coursegroup_detail',
+                kwargs={'pk': next.first().id}
+            )
+        return False
+
+    def get_prev(self):
+        prev = self.__class__.objects.filter(id__lt=self.id).order_by('-id')
+        if prev:
+            return reverse(
+                'assignments:coursegroup_detail',
+                kwargs={'pk': prev.first().id}
+            )
+        return False
+
 
 INSTITUTION_LEVEL = (
     ('LS', 'LS'),

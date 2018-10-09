@@ -382,3 +382,80 @@ class LearnerProfileDelete(DeleteView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(LearnerProfileDelete, self).dispatch(*args, **kwargs)
+
+
+class CourseGroupListView(GenericListView):
+    model = CourseGroup
+    table_class = CourseGroupTable
+    filter_class = CourseGroupListFilter
+    formhelper_class = CourseGroupFilterFormHelper
+    init_columns = [
+        'id',
+        'type',
+    ]
+
+    def get_all_cols(self):
+        all_cols = list(self.table_class.base_columns.keys())
+        return all_cols
+
+    def get_context_data(self, **kwargs):
+        context = super(CourseGroupListView, self).get_context_data()
+        context[self.context_filter_name] = self.filter
+        togglable_colums = [x for x in self.get_all_cols() if x not in self.init_columns]
+        context['togglable_colums'] = togglable_colums
+        return context
+
+    def get_table(self, **kwargs):
+        table = super(GenericListView, self).get_table()
+        RequestConfig(self.request, paginate={
+            'page': 1, 'per_page': self.paginate_by
+        }).configure(table)
+        default_cols = self.init_columns
+        all_cols = self.get_all_cols()
+        selected_cols = self.request.GET.getlist("columns") + default_cols
+        exclude_vals = [x for x in all_cols if x not in selected_cols]
+        table.exclude = exclude_vals
+        return table
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(CourseGroupListView, self).dispatch(*args, **kwargs)
+
+
+class CourseGroupDetailView(DetailView):
+    model = CourseGroup
+    template_name = 'browsing/generic_detail.html'
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(CourseGroupDetailView, self).dispatch(*args, **kwargs)
+
+
+class CourseGroupCreate(BaseCreateView):
+
+    model = CourseGroup
+    form_class = CourseGroupForm
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(CourseGroupCreate, self).dispatch(*args, **kwargs)
+
+
+class CourseGroupUpdate(BaseUpdateView):
+
+    model = CourseGroup
+    form_class = CourseGroupForm
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(CourseGroupUpdate, self).dispatch(*args, **kwargs)
+
+
+class CourseGroupDelete(DeleteView):
+    model = CourseGroup
+    template_name = 'webpage/confirm_delete.html'
+    success_url = reverse_lazy('assignments:browse_groups')
+
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(CourseGroupDelete, self).dispatch(*args, **kwargs)

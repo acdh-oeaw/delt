@@ -56,3 +56,10 @@ class LearnerProfileListFilter(django_filters.FilterSet):
     class Meta:
         model = LearnerProfile
         fields = "__all__"
+
+
+class CourseGroupListFilter(django_filters.FilterSet):
+
+    class Meta:
+        model = CourseGroup
+        fields = "__all__"

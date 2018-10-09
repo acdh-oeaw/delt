@@ -51,4 +51,15 @@ urlpatterns = [
         name='learnerprofile_edit'),
     url(r'^learnerprofile/create/$', views.LearnerProfileCreate.as_view(),
         name='learnerprofile_create'),
+    url(r'^coursegroups/$',
+        views.CourseGroupListView.as_view(), name='browse_coursegroups'
+        ),
+    url(r'^coursegroup/detail/(?P<pk>[0-9]+)$', views.CourseGroupDetailView.as_view(),
+        name='coursegroup_detail'),
+    url(r'^coursegroup/delete/(?P<pk>[0-9]+)$', views.CourseGroupDelete.as_view(),
+        name='coursegroup_delete'),
+    url(r'^coursegroup/edit/(?P<pk>[0-9]+)$', views.CourseGroupUpdate.as_view(),
+        name='coursegroup_edit'),
+    url(r'^coursegroup/create/$', views.CourseGroupCreate.as_view(),
+        name='coursegroup_create'),
 ]
