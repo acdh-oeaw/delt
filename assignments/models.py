@@ -32,6 +32,9 @@ class Person(IdProvider):
         max_length=250, blank=True, null=True, verbose_name="Pseudonym",
         help_text="some random name"
     )
+    legacy_id = models.CharField(
+        max_length=250, blank=True, null=True, verbose_name="Legacy ID"
+    )
 
 
 class Institution(IdProvider):
@@ -39,12 +42,18 @@ class Institution(IdProvider):
         max_length=250, blank=True, null=True, verbose_name="name",
         help_text="The institution's name"
     )
+    legacy_id = models.CharField(
+        max_length=250, blank=True, null=True, verbose_name="Legacy ID"
+    )
 
 
 class Place(IdProvider):
     name = models.CharField(
         max_length=250, blank=True, null=True, verbose_name="name",
         help_text="The place's name"
+    )
+    legacy_id = models.CharField(
+        max_length=250, blank=True, null=True, verbose_name="Legacy ID"
     )
 
 
@@ -125,53 +134,57 @@ class Assignment(AssignmentBaseClass):
 
 
 class Learner(AssignmentBaseClass):
+
+    """background information about the learner"""
+
     year_of_birth = models.IntegerField(
-        blank=True, null=True, verbose_name="Year of Birth",
-        help_text="provide some"
+        blank=True, null=True, verbose_name="Learner's year of birth",
+        help_text="Learner's year of birth"
     )
     gender = models.CharField(
-        max_length=250, blank=True, verbose_name="gender",
-        help_text="provide some",
+        max_length=250, blank=True, verbose_name="Learner's gender",
+        help_text="Learner's gender",
         choices=GENDER_CHOICES
     )
     nationality = models.ForeignKey(
         Place, null=True, blank=True,
-        help_text="nationality",
+        verbose_name="Learner's nationality",
+        help_text="Learner's nationality",
         related_name="has_persons",
         on_delete=models.SET_NULL
     )
     lang_l = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="lang_L1",
-        help_text="provide some",
+        verbose_name="mother tongue",
+        help_text="mother tongue",
         related_name="is_lang_l_of",
         on_delete=models.SET_NULL
     )
     lang_mother = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="lang_mother",
-        help_text="provide some",
+        verbose_name="Mother's L1",
+        help_text="Mother's L1",
         related_name="is_mother_lang_of",
         on_delete=models.SET_NULL
     )
     lang_father = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="lang_father",
-        help_text="provide some",
+        verbose_name="father's L1",
+        help_text="father's L1",
         related_name="is_father_lang_of",
         on_delete=models.SET_NULL
     )
     lang_second = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="lang_second",
-        help_text="provide some",
+        verbose_name="second language",
+        help_text="second language ≠ foreign language",
         related_name="is_second_lang_of",
         on_delete=models.SET_NULL
     )
     lang_third = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="lang_third",
-        help_text="provide some",
+        verbose_name="third language",
+        help_text="third language ≠ foreign language",
         related_name="is_third_lang_of",
         on_delete=models.SET_NULL
     )
@@ -181,60 +194,122 @@ class Learner(AssignmentBaseClass):
 
 
 class LearnerProfile(AssignmentBaseClass):
-    learner_id = models.ForeignKey(
-        Learner, null=True, blank=True,
+
+    """Background information about the learner which is subject to change;
+    the profile stays unchanged until a new learner profile is filled in;
+    to provide for longitudinal data, the profile can be updated."""
+
+    learner_id = models.ManyToManyField(
+        Learner, blank=True,
         help_text="learner_id",
-        related_name="has_learner_profile",
-        on_delete=models.SET_NULL
+        related_name="has_learner_profile"
     )
     year = models.IntegerField(
         blank=True, null=True,
-        verbose_name="Year of Learner Profile",
-        help_text="provide some"
+        verbose_name="Year when the profile was filled in",
+        help_text="year when the profile was filled in"
     )
     lang_spoken_home = models.CharField(
         null=True, blank=True, max_length=250,
-        verbose_name="lang_spoken@home",
-        help_text="provide some"
+        verbose_name="description of language use at home ",
+        help_text="(if more than one language is spoken, provide the % of use of each language)\
+        format: Bosnian: 50% Slovenian: 50%"
     )
     lang_instruction_primary = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="lang_instruction_primary",
-        help_text="provide some",
+        verbose_name="Language of instruction in primary school",
+        help_text="Language of instruction in primary school",
         related_name="is_lang_instruction_primary",
         on_delete=models.SET_NULL
     )
     lang_instruction_secondary = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="lang_instruction_secondary",
-        help_text="provide some",
+        verbose_name="Language of instruction in secondary school",
+        help_text="Language of instruction in secondary school",
         related_name="is_lang_instruction_secondary",
         on_delete=models.SET_NULL
     )
     clil_years_learner_profile = models.IntegerField(
         blank=True, null=True,
-        verbose_name="clil_years_learner_profile",
-        help_text="provide some"
+        verbose_name="Number of years CLIL-classes were attended",
+        help_text="Number of years CLIL-classes were attended"
     )
     clil_subjects_learner_profile = models.CharField(
         null=True, blank=True, max_length=250,
-        verbose_name="clil_subjects_learner_profile",
-        help_text="provide some"
+        verbose_name="Definition of the CLIL classes attended",
+        help_text="format: biology(2) = 2 years of CLIL in biology;"
     )
     english_school = models.IntegerField(
         blank=True, null=True,
-        verbose_name="english_school",
-        help_text="provide some"
+        verbose_name="Semesters of English at school",
+        help_text="Semesters of English at school"
     )
     english_university = models.IntegerField(
         blank=True, null=True,
-        verbose_name="english_university",
-        help_text="provide some"
+        verbose_name="Semesters of English at university",
+        help_text="Semesters of English at university"
     )
     english_other = models.IntegerField(
         blank=True, null=True,
-        verbose_name="english_other",
-        help_text="provide some"
+        verbose_name="Semesters of English outside school and university",
+        help_text="round DOWN/UP --> - 3 months = 0; + 3 months = 1"
+    )
+    proficiency_level = models.CharField(
+        null=True, blank=True, max_length=250,
+        verbose_name="Latest CEF score/placement ",
+        help_text="A1;A2;B1;B2;C1;C2"
+    )
+    proficiency_test = models.ForeignKey(
+        SkosConcept, null=True, blank=True,
+        verbose_name="proficiency test taken",
+        help_text="(e.g. QPT; CAE; ...);",
+        related_name="is_proficiency_test",
+        on_delete=models.SET_NULL
+    )
+    proficiency_test_year = models.IntegerField(
+        blank=True, null=True,
+        verbose_name="Year of latest CEF score/placement",
+        help_text="year of latest CEF score/placement"
+    )
+    school_year = models.IntegerField(
+        blank=True, null=True,
+        verbose_name="Current year of schooling",
+        help_text="Only applicable if the participant still attends school"
+    )
+    studies_semester = models.IntegerField(
+        blank=True, null=True,
+        verbose_name="Current semester of studies ",
+        help_text="Only applicable if the participant attends university/college)"
+    )
+    abroad_english_total = models.IntegerField(
+        blank=True, null=True,
+        verbose_name="Total time spent in English speaking countries (weeks); ",
+        help_text="DO NOT FILL IN! automatic calculation"
+    )
+    abroad_english_vacation = models.IntegerField(
+        blank=True, null=True,
+        verbose_name="Time spent in English speaking countries on vacation ",
+        help_text="Weeks! – calculate 1 month = 4 weeks"
+    )
+    abroad_english_school = models.IntegerField(
+        blank=True, null=True,
+        verbose_name="Time spent in English speaking countries with school",
+        help_text="Including trips with language schools (weeks! – calculate 1 month = 4 weeks)"
+    )
+    abroad_english_studies = models.IntegerField(
+        blank=True, null=True,
+        verbose_name="Time spent studying in English speaking countries ",
+        help_text="Weeks! – calculate 1 month = 4 weeks"
+    )
+    abroad_english_work = models.IntegerField(
+        blank=True, null=True,
+        verbose_name="Time spent working in English speaking countries",
+        help_text="Including time spent as an Au-Pair (weeks! – calculate 1 month = 4 weeks)"
+    )
+    abroad_english_desc = models.CharField(
+        null=True, blank=True, max_length=250,
+        verbose_name="Description of stays in English-speaking countries",
+        help_text="When? How long? Where? What?; format: 2005/2006 - 10 months - London - Au Pair"
     )
 
 
@@ -492,12 +567,11 @@ class Text(AssignmentBaseClass):
 
 
 class TextVersion(AssignmentBaseClass):
-    text_id = models.ForeignKey(
-        Text, null=True, blank=True,
+    text_id = models.ManyToManyField(
+        Text, blank=True,
         verbose_name="text_id",
         help_text="provide some",
         related_name="has_text_version",
-        on_delete=models.SET_NULL
     )
     status = models.ForeignKey(
         SkosConcept, null=True, blank=True,

@@ -53,9 +53,11 @@
                         {% get_verbose_name textversion "text_id" %}
                     </th>
                     <td>
-                        <a href="{{ object.text_id.get_absolute_url }}">
-                            {{ object.text_id }}
-                        </a>
+                        {% for x in object.text_id.all %}
+                            <li>
+                                <a href="{{ x.get_absolute_url }}">{{ x.id }}</a>
+                            </li>
+                        {% endfor %}
                     </td>
                 </tr>
                 <tr>

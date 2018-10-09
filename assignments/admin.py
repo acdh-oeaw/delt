@@ -18,7 +18,7 @@ class LearnerAdmin(admin.ModelAdmin):
 
 class LearnerProfileAdmin(admin.ModelAdmin):
     list_display = (
-        'learner_id', 'year', 'lang_spoken_home', 'lang_instruction_primary',
+        'year', 'lang_spoken_home', 'lang_instruction_primary',
         'lang_instruction_secondary'
         )
     list_filter = ['year', 'lang_spoken_home']
