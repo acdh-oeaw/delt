@@ -88,14 +88,24 @@ class AssignmentBaseClass(IdProvider):
 
 
 class Assignment(AssignmentBaseClass):
+
+    """this table allows for the detailed description of specific assignments/tasks
+    that were the prompts for the text production
+    """
+
     title = models.CharField(
-        max_length=250, blank=True, null=True, verbose_name="Title of Assignment"
+        max_length=250, blank=True,
+        null=True, verbose_name="Title of Assignment",
+        help_text="Short description of the assignment"
     )
     description = models.TextField(
-        blank=True, null=True, verbose_name="Description of Assignment"
+        blank=True, null=True,
+        verbose_name="Description of Assignment",
+        help_text="Detailed description of the assignment"
     )
     assignment_desc_link = models.CharField(
-        max_length=250, blank=True, null=True, verbose_name="File name of related Binary"
+        max_length=250, blank=True, null=True,
+        verbose_name="possible PDF/Audio/... files"
     )
 
     def __str__(self):
@@ -394,10 +404,15 @@ class LearnerProfile(AssignmentBaseClass):
 
 
 class CourseGroup(AssignmentBaseClass):
+
+    """this table is used either when a text is produced by a group (e.g. classroom discourse)*,
+    or when a learner who produces a text by himself can be associated with a group
+    (e.g. a particular class/course)"""
+
     course_type = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="course type ('COURSE_ID')",
-        help_text="provide some",
+        verbose_name="Course type",
+        help_text="Course type",
         related_name="is_course_type_of",
         on_delete=models.SET_NULL
     )
@@ -407,22 +422,24 @@ class CourseGroup(AssignmentBaseClass):
     )
     course_description = models.TextField(
         blank=True, null=True,
-        verbose_name="group_course_desc", help_text="provide some"
+        verbose_name="Individual 'label' for this group",
+        help_text="e.g. 07_Draschestrasse_3A"
     )
     participants_no = models.IntegerField(
         blank=True, null=True,
-        verbose_name="participants_no",
-        help_text="provide some"
+        verbose_name="Number of participants",
+        help_text="Number of participants"
     )
     school_studies_year = models.IntegerField(
         blank=True, null=True,
-        verbose_name="school_studies_year",
-        help_text="provide some"
+        verbose_name="Current year of schooling/studies",
+        help_text="(approximate?) school: e.g. 5AHS = 9\
+        (count school-years 1 through 13)"
     )
-    teacher_lecturer = models.ManyToManyField(
-        Person, blank=True, verbose_name="teacher_lecturer",
-        help_text="provide some",
-        related_name="has_group"
+    teacher_lecturer = models.CharField(
+        max_length=250, blank=True, null=True,
+        verbose_name="Name of teacher/lecturer",
+        help_text="Name of teacher/lecturer"
     )
     group_notes = models.TextField(
         blank=True, null=True,
@@ -653,13 +670,15 @@ class Text(AssignmentBaseClass):
         )
 
     def __str__(self):
-        if self.text_type:
-            return "{}".format(self.text_type)
-        else:
-            return "{}".format(self.id)
+        return "{}".format(self.id)
 
 
 class TextVersion(AssignmentBaseClass):
+    """various versions of the text can be saved in this table, along with a description of the
+    respective version, which is defined in tbl_text_status;
+    (the original files are stored in a folder in the server (pool_texts)
+    and associated with the database with a link; the texts are copy-pasted into the memo-field)
+"""
     text_id = models.ManyToManyField(
         Text, blank=True,
         verbose_name="text_id",
