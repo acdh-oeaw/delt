@@ -484,6 +484,12 @@ class CourseGroup(AssignmentBaseClass):
             )
         return False
 
+    def __str__(self):
+        if self.course_name:
+            return "{} (id: {})".format(self.course_name, self.id)
+        else:
+            return "{}".format(self.id)
+
 
 INSTITUTION_LEVEL = (
     ('LS', 'LS'),
