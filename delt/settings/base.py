@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'reversion',
     'crispy_forms',
+    'django_extensions',
     'django_filters',
     'django_tables2',
     'rest_framework',
