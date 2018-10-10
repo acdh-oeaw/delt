@@ -358,8 +358,8 @@ class LearnerProfile(AssignmentBaseClass):
         verbose_name="Time spent working in English speaking countries",
         help_text="Including time spent as an Au-Pair (weeks! – calculate 1 month = 4 weeks)"
     )
-    abroad_english_desc = models.CharField(
-        null=True, blank=True, max_length=250,
+    abroad_english_desc = models.TextField(
+        null=True, blank=True,
         verbose_name="Description of stays in English-speaking countries",
         help_text="When? How long? Where? What?; format: 2005/2006 - 10 months - London - Au Pair"
     )
