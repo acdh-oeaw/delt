@@ -1,7 +1,14 @@
 .card {
     overflow: visible;
+    box-shadow: 4px 4px 4px 0px #7c989b42;
 }
 
 a {
-    color: #88dbdf;
+    color: #94bbdd;
+}
+.control-label {
+    font-weight: 600;
+}
+.help-block {
+    font-size: 0.8rem;
 }
