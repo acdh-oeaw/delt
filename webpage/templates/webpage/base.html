@@ -80,17 +80,15 @@
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Curate and Browse the Data
                                 <span class="caret"/>
                                 </a>
-                                {% else %}
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse the Data
-                                <span class="caret"/>
-                                </a>
-                                {% endif %}
                                 <div class="dropdown-menu">
                                     {% nav_menu app='assignments' as links %}
                                     {% for x in links %}
                                         <a class="dropdown-item" href="{{ x.link}}">{{ x.name }}</a>
                                     {% endfor %}
                                 </div>
+                                {% else %}
+                                {% endif %}
+
                             </li>
                     {% if 'sparql' in APPS %}
                         <li class="nav-item dropdown">
