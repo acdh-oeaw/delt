@@ -111,13 +111,17 @@ class TextVersionFilterFormHelper(FormHelper):
         self.layout = Layout(
             Fieldset(
                 'Basic search options',
-                'id',
+                'legacy_id',
+                'text_id__participant_id',
+                'text_id__grade',
                 css_id="basic_search_fields"
                 ),
             Accordion(
                 AccordionGroup(
                     'Advanced search',
-                    'legacy_id',
+                    'text_id__medium',
+                    'text_id__mode',
+                    'text_id__text_type',
                     css_id="more"
                     ),
                 )

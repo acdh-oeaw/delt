@@ -769,11 +769,12 @@ class Text(AssignmentBaseClass):
 
 
 class TextVersion(AssignmentBaseClass):
-    """various versions of the text can be saved in this table, along with a description of the
+
+    """Various versions of the text can be saved in this table, along with a description of the
     respective version, which is defined in tbl_text_status;
     (the original files are stored in a folder in the server (pool_texts)
-    and associated with the database with a link; the texts are copy-pasted into the memo-field)
-"""
+    and associated with the database with a link; the texts are copy-pasted into the memo-field)"""
+
     text_id = models.ManyToManyField(
         Text, blank=True,
         verbose_name="text_id",
