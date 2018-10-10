@@ -168,7 +168,8 @@ class TextVersionListView(GenericListView):
     formhelper_class = TextVersionFilterFormHelper
     init_columns = [
         'legacy_id',
-        'type',
+        'text_id__mode',
+        'text_id__text_type',
     ]
 
     def get_all_cols(self):

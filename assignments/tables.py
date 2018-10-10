@@ -46,13 +46,29 @@ class TextTable(tables.Table):
 
 
 class TextVersionTable(tables.Table):
+    text_id = tables.ManyToManyColumn()
     legacy_id = tables.LinkColumn(
         'assignments:textversion_detail',
-        args=[A('pk')], verbose_name='Legacy ID'
+        args=[A('pk')], verbose_name='ID'
     )
     status = tables.LinkColumn(
         'assignments:textversion_detail',
         args=[A('pk')], verbose_name='Status'
+    )
+    text_id__grade = tables.TemplateColumn(
+        template_name='assignments/tables/text_id__grade.html'
+    )
+    text_id__medium = tables.TemplateColumn(
+        template_name='assignments/tables/text_id__medium.html',
+        verbose_name=Text._meta.get_field('medium').verbose_name
+    )
+    text_id__mode = tables.TemplateColumn(
+        template_name='assignments/tables/text_id__mode.html',
+        verbose_name=Text._meta.get_field('mode').verbose_name
+    )
+    text_id__text_type = tables.TemplateColumn(
+        template_name='assignments/tables/text_id__text_type.html',
+        verbose_name=Text._meta.get_field('text_type').verbose_name
     )
 
     forename = tables.Column()

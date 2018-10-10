@@ -590,7 +590,7 @@ class Participant(AssignmentBaseClass):
         return False
 
     def __str__(self):
-        return "{}".format(self.learner_id)
+        return "{}".format(self.id)
 
 
 class Text(AssignmentBaseClass):
