@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-md-8">
                     <h1 style="text-align: center;">
-                        <small>skos:Concept</small> {{ object }}
+                        <a href="{{ object.get_listview_url }}"><small>skos:Concept</small></a> {{ object }}
                         {% if user.is_authenticated %}
                             <small>
                                 <a href="{% url 'vocabs:skosconcept_update' pk=object.id %}">
@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-        
+
         <table class="table">
         <tr>
             <th>skos:prefLabel</th>
@@ -53,8 +53,8 @@
         {% for x in object.other_label.all %}
             <tr>
                 <th>skos:{{x.label_type}}</th>
-                <td>                  
-                {{ x.name }}  @{{x.isoCode}}                 
+                <td>
+                {{ x.name }}  @{{x.isoCode}}
                 </td>
             </tr>
         {% endfor %}
@@ -357,9 +357,9 @@
             <th>skos:example</th>
             <td>{{object.skos_example}}</td>
         </tr>
-        {% endif %} 
-        </table>    
-        
+        {% endif %}
+        </table>
+
     </div>
 </div>
 {% endblock content %}
