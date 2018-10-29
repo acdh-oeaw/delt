@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'stats',
     'assignments',
     'charts',
+    'shibboleth',
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap3"
@@ -53,6 +54,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'shibboleth.middleware.ShibbolethRemoteUserMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'reversion.middleware.RevisionMiddleware',
@@ -74,6 +76,8 @@ TEMPLATES = [
                 'webpage.webpage_content_processors.installed_apps',
                 'webpage.webpage_content_processors.is_dev_version',
                 'webpage.webpage_content_processors.get_db_name',
+                'shibboleth.context_processors.login_link',
+                'shibboleth.context_processors.logout_link',
             ],
         },
     },
@@ -100,6 +104,19 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'shibboleth.backends.ShibbolethRemoteUserBackend',
+]
+
+SHIBBOLETH_ATTRIBUTE_MAP = {
+    "shib-user": (True, "username"),
+    "shib-given-name": (False, "first_name"),
+    "shib-sn": (False, "last_name"),
+    "shib-mail": (False, "email"),
+}
+
+LOGIN_URL = 'https://acdh.oeaw.ac.at/shibboleth-ds/index.html'
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 

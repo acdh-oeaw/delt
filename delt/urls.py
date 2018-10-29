@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^charts/', include('charts.urls', namespace='charts')),
     url(r'^vocabs/', include('vocabs.urls', namespace='vocabs')),
     url(r'^vocabs-ac/', include('vocabs.dal_urls', namespace='vocabs-ac')),
+    url(r'^shib/', include('shibboleth.urls', namespace='shibboleth')),
     url(r'^', include('webpage.urls', namespace='webpage')),
 ]
 
