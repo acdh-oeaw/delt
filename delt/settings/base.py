@@ -116,7 +116,7 @@ SHIBBOLETH_ATTRIBUTE_MAP = {
     "shib-mail": (False, "email"),
 }
 
-LOGIN_URL = 'https://acdh.oeaw.ac.at/shibboleth-ds/index.html'
+LOGIN_URL = 'https://delt.acdh-dev.oeaw.ac.at//Shibboleth.sso/Login'
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
