@@ -78,6 +78,7 @@ TEMPLATES = [
                 'webpage.webpage_content_processors.get_db_name',
                 'shibboleth.context_processors.login_link',
                 'shibboleth.context_processors.logout_link',
+                'webpage.webpage_content_processors.check_shb',
             ],
         },
     },

@@ -12,11 +12,19 @@
                     The Database of English Learner Texts (DELT) aims to promote research on the learning and use of English. The database is freely available to all members of the research community, provided they adhere to the <a href="/terms-of-use"><strong>conditions of use</strong></a> (see below). The database consists of a collection of texts (both written and oral) produced by learners of English. Background information on the texts and authors allows users of DELT to find texts that share certain characteristics, such as language proficiency level, text type/genre, modality etc. The resulting text corpora can then be analysed with tools such as <a href="http://www.laurenceanthony.net/software/antwordprofiler/"><strong>AntWord®</strong></a>, <a href="https://www.lexically.net/wordsmith/"><strong>WordSmith®</strong></a>or others. The majority of participants have German as their dominant language and produced these texts in school or university settings. More detailed information on the texts and participants is provided in each text header.
                 </p>
                 <a href="/about" type="button" class="btn btn-secondary btn btn-lg explore">About the Project</a>
-                <a href="/assignments/textversions/" type="button" class="btn btn-secondary btn-lg explore">Explore the Data</a>
-
+                {% if SHIB %}
+                    <a href="/assignments/textversions/" type="button" class="btn btn-secondary btn-lg explore">Explore the Data</a>
+                {% else %}
+                    <a href="/Shibboleth.sso/Login" type="button" class="btn btn-secondary btn-lg explore">log in with shib</a>
+                {% endif %}
             </div>
         </div>
-        
+
+        <h2>dev</h2>
+        {% if SHIB %}
+            {{ SHIB }}
+        {% endif %}
+
 
 
 {% endblock %}

@@ -18,3 +18,14 @@ def get_db_name(request):
         return {'DB_NAME': db_name}
     except Exception as e:
         return {}
+
+
+def check_shb(request):
+    try:
+        shib = request.META['HTTP_EPPN']
+    except KeyError:
+        shib = 'null'
+    if shib != 'null':
+        return {'SHIB': shib}
+    else:
+        return {'SHIB': False}
