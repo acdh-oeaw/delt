@@ -4,10 +4,12 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import DeleteView
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from django.contrib.auth.mixins import UserPassesTestMixin
 
 from django_tables2 import RequestConfig
 
 from browsing.browsing_utils import GenericListView, BaseCreateView, BaseUpdateView
+from webpage.utils import access_for_shib_and_loggedin
 
 from . models import *
 from . tables import *
@@ -15,7 +17,7 @@ from . filters import *
 from . forms import *
 
 
-class AssignmentListView(GenericListView):
+class AssignmentListView(UserPassesTestMixin, GenericListView):
     model = Assignment
     table_class = AssignmentTable
     filter_class = AssignmentListFilter
@@ -24,6 +26,11 @@ class AssignmentListView(GenericListView):
         'id',
         'title',
     ]
+
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        print(access)
+        return access
 
     def get_all_cols(self):
         all_cols = list(self.table_class.base_columns.keys())
@@ -49,9 +56,13 @@ class AssignmentListView(GenericListView):
         return table
 
 
-class AssignmentDetailView(DetailView):
+class AssignmentDetailView(UserPassesTestMixin, DetailView):
     model = Assignment
     template_name = 'assignments/assignment_detail.html'
+
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        return access
 
 
 class AssignmentCreate(BaseCreateView):
@@ -84,7 +95,7 @@ class AssignmentDelete(DeleteView):
         return super(AssignmentDelete, self).dispatch(*args, **kwargs)
 
 
-class TextListView(GenericListView):
+class TextListView(UserPassesTestMixin, GenericListView):
     model = Text
     table_class = TextTable
     filter_class = TextListFilter
@@ -93,6 +104,10 @@ class TextListView(GenericListView):
         'legacy_id',
         'type',
     ]
+
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        return access
 
     def get_all_cols(self):
         all_cols = list(self.table_class.base_columns.keys())
@@ -117,18 +132,14 @@ class TextListView(GenericListView):
         table.exclude = exclude_vals
         return table
 
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(TextListView, self).dispatch(*args, **kwargs)
 
-
-class TextDetailView(DetailView):
+class TextDetailView(UserPassesTestMixin, DetailView):
     model = Text
     template_name = 'assignments/text_detail.html'
 
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(TextDetailView, self).dispatch(*args, **kwargs)
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        return access
 
 
 class TextCreate(BaseCreateView):
@@ -161,7 +172,7 @@ class TextDelete(DeleteView):
         return super(TextDelete, self).dispatch(*args, **kwargs)
 
 
-class TextVersionListView(GenericListView):
+class TextVersionListView(UserPassesTestMixin, GenericListView):
     model = TextVersion
     table_class = TextVersionTable
     filter_class = TextVersionListFilter
@@ -171,6 +182,10 @@ class TextVersionListView(GenericListView):
         'text_id__mode',
         'text_id__text_type',
     ]
+
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        return access
 
     def get_all_cols(self):
         all_cols = list(self.table_class.base_columns.keys())
@@ -195,18 +210,14 @@ class TextVersionListView(GenericListView):
         table.exclude = exclude_vals
         return table
 
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(TextVersionListView, self).dispatch(*args, **kwargs)
 
-
-class TextVersionDetailView(DetailView):
+class TextVersionDetailView(UserPassesTestMixin, DetailView):
     model = TextVersion
     template_name = 'assignments/textversion_detail.html'
 
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(TextVersionDetailView, self).dispatch(*args, **kwargs)
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        return access
 
 
 class TextVersionCreate(BaseCreateView):
@@ -239,7 +250,7 @@ class TextVersionDelete(DeleteView):
         return super(TextVersionDelete, self).dispatch(*args, **kwargs)
 
 
-class LearnerListView(GenericListView):
+class LearnerListView(UserPassesTestMixin, GenericListView):
     model = Learner
     table_class = LearnerTable
     filter_class = LearnerListFilter
@@ -248,6 +259,10 @@ class LearnerListView(GenericListView):
         'id',
         'title',
     ]
+
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        return access
 
     def get_all_cols(self):
         all_cols = list(self.table_class.base_columns.keys())
@@ -273,9 +288,13 @@ class LearnerListView(GenericListView):
         return table
 
 
-class LearnerDetailView(DetailView):
+class LearnerDetailView(UserPassesTestMixin, DetailView):
     model = Learner
     template_name = 'browsing/generic_detail.html'
+
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        return access
 
 
 class LearnerCreate(BaseCreateView):
@@ -308,7 +327,7 @@ class LearnerDelete(DeleteView):
         return super(LearnerDelete, self).dispatch(*args, **kwargs)
 
 
-class LearnerProfileListView(GenericListView):
+class LearnerProfileListView(UserPassesTestMixin, GenericListView):
     model = LearnerProfile
     table_class = LearnerProfileTable
     filter_class = LearnerProfileListFilter
@@ -317,6 +336,10 @@ class LearnerProfileListView(GenericListView):
         'id',
         'type',
     ]
+
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        return access
 
     def get_all_cols(self):
         all_cols = list(self.table_class.base_columns.keys())
@@ -341,18 +364,14 @@ class LearnerProfileListView(GenericListView):
         table.exclude = exclude_vals
         return table
 
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(LearnerProfileListView, self).dispatch(*args, **kwargs)
 
-
-class LearnerProfileDetailView(DetailView):
+class LearnerProfileDetailView(UserPassesTestMixin, DetailView):
     model = LearnerProfile
     template_name = 'browsing/generic_detail.html'
 
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(LearnerProfileDetailView, self).dispatch(*args, **kwargs)
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        return access
 
 
 class LearnerProfileCreate(BaseCreateView):
@@ -385,7 +404,7 @@ class LearnerProfileDelete(DeleteView):
         return super(LearnerProfileDelete, self).dispatch(*args, **kwargs)
 
 
-class CourseGroupListView(GenericListView):
+class CourseGroupListView(UserPassesTestMixin, GenericListView):
     model = CourseGroup
     table_class = CourseGroupTable
     filter_class = CourseGroupListFilter
@@ -394,6 +413,10 @@ class CourseGroupListView(GenericListView):
         'id',
         'type',
     ]
+
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        return access
 
     def get_all_cols(self):
         all_cols = list(self.table_class.base_columns.keys())
@@ -418,18 +441,14 @@ class CourseGroupListView(GenericListView):
         table.exclude = exclude_vals
         return table
 
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(CourseGroupListView, self).dispatch(*args, **kwargs)
 
-
-class CourseGroupDetailView(DetailView):
+class CourseGroupDetailView(UserPassesTestMixin, DetailView):
     model = CourseGroup
     template_name = 'browsing/generic_detail.html'
 
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(CourseGroupDetailView, self).dispatch(*args, **kwargs)
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        return access
 
 
 class CourseGroupCreate(BaseCreateView):
@@ -462,7 +481,7 @@ class CourseGroupDelete(DeleteView):
         return super(CourseGroupDelete, self).dispatch(*args, **kwargs)
 
 
-class ParticipantListView(GenericListView):
+class ParticipantListView(UserPassesTestMixin, GenericListView):
     model = Participant
     table_class = ParticipantTable
     filter_class = ParticipantListFilter
@@ -471,6 +490,10 @@ class ParticipantListView(GenericListView):
         'id',
         'type',
     ]
+
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        return access
 
     def get_all_cols(self):
         all_cols = list(self.table_class.base_columns.keys())
@@ -495,18 +518,14 @@ class ParticipantListView(GenericListView):
         table.exclude = exclude_vals
         return table
 
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(ParticipantListView, self).dispatch(*args, **kwargs)
 
-
-class ParticipantDetailView(DetailView):
+class ParticipantDetailView(UserPassesTestMixin, DetailView):
     model = Participant
     template_name = 'browsing/generic_detail.html'
 
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(ParticipantDetailView, self).dispatch(*args, **kwargs)
+    def test_func(self):
+        access = access_for_shib_and_loggedin(self)
+        return access
 
 
 class ParticipantCreate(BaseCreateView):
