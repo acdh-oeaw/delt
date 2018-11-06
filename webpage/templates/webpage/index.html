@@ -17,7 +17,11 @@
             </div>
         </div>
         <h1>dev</h1>
-        
+        {% for key, values in meta.items %}
+            <li>
+                {{ key }}: {{ values }}
+            </li>
+        {% endfor %}
 
 
 {% endblock %}
