@@ -28,4 +28,4 @@ def check_shb(request):
     if shib != '(null)':
         return {'SHIB': shib}
     else:
-        return {'SHIB': False}
+        return {'SHIB': ''}
