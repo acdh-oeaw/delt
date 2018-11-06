@@ -7,5 +7,9 @@
     {% endif %}
     {% load crispy_forms_tags %}
     {% crispy form form.helper %}
+
+    {% if 'shibboleth' in APPS %}
+        <a href="/Shibboleth.sso/Login" type="button" class="btn btn-secondary">log in with shib</a>
+    {% endif %}
 </div>
 {% endblock %}
