@@ -24,8 +24,8 @@ def check_shb(request):
     try:
         shib = request.META['HTTP_EPPN']
     except KeyError:
-        shib = 'null'
-    if shib != 'null':
+        shib = '(null)'
+    if shib != '(null)':
         return {'SHIB': shib}
     else:
         return {'SHIB': False}
