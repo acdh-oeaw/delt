@@ -15,6 +15,6 @@ The majority of participants have German as their dominant language and produced
     'purpose_en': 'The purpose of DELT is the publication of research data.',
     'version': '0.0.1',
     'matomo_id': '84',
-    'matomo_url': '//piwik.apollo.arz.oeaw.ac.at/',
+    'matomo_url': '//matomo.acdh.oeaw.ac.at/',
     'imprint': 'https://www.oeaw.ac.at/die-oeaw/impressum/',
 }
