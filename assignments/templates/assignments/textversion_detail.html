@@ -96,6 +96,24 @@
                 </tr>
             </table>
             <legend>
+                Info about the related Text(s)
+            </legend>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>
+                        Text Type
+                        <i class="fas fa-info-circle" data-toggle="tooltip" data-html="true" title="Describes the text type"></i>
+                    </th>
+                    <td>
+                        {% for x in object.text_id.all %}
+                            <li>
+                                {{ x.text_type.pref_label }}
+                            </li>
+                        {% endfor %}
+                    </td>
+                </tr>
+            </table>
+            <legend>
                 internal info
             </legend>
             <table class="table table-bordered table-hover">
