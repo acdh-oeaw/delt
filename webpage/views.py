@@ -1,10 +1,14 @@
+from copy import deepcopy
+
 from django.conf import settings
 from django.shortcuts import render, render_to_response
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.template import RequestContext, loader
 from django.views.generic import TemplateView
 from django.contrib.auth import authenticate, login, logout
-from .forms import form_user_login
+
+from . forms import form_user_login
+from . metadata import PROJECT_METADATA as PM
 
 
 class GenericWebpageView(TemplateView):
@@ -13,7 +17,6 @@ class GenericWebpageView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(GenericWebpageView, self).get_context_data(**kwargs)
         context['apps'] = settings.INSTALLED_APPS
-        context['meta'] = self.request.META
         return context
 
     def get_template_names(self):
@@ -52,3 +55,19 @@ def user_logout(request):
 
 def handler404(request, exception):
     return render(request, 'webpage/404-error.html', locals())
+
+
+def project_info(request):
+
+    """
+    returns a dict providing metadata about the current project
+    """
+
+    info_dict = deepcopy(PM)
+
+    if request.user.is_authenticated:
+        pass
+    else:
+        del info_dict['matomo_id']
+        del info_dict['matomo_url']
+    return JsonResponse(info_dict)
