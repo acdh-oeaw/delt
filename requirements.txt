@@ -14,7 +14,7 @@ django-filter==2.0.0
 django-reversion==3.0.0
 django-shibboleth-remoteuser==0.11a2
 django-tables2==2.0.1
-djangorestframework==3.8.2
+djangorestframework==3.9.1
 entrypoints==0.2.3
 idna==2.7
 ipykernel==5.0.0
