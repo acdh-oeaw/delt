@@ -44,102 +44,28 @@
         </div>
     </div>
         <div class="card-body">
-            <legend>
-                Info
-            </legend>
-            <table class="table table-bordered table-hover">
-                <tr>
-                    <th>
-                        {% get_verbose_name textversion "text_id" %}
-                    </th>
-                    <td>
-                        {% for x in object.text_id.all %}
-                            <li>
-                                <a href="{{ x.get_absolute_url }}">{{ x.id }}</a>
-                            </li>
-                        {% endfor %}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        {% get_verbose_name textversion "status" %}
-                    </th>
-                    <td>
-                        {{ object.status }}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        {% get_verbose_name textversion "link" %}
-                    </th>
-                    <td>
-                        {{ object.link }}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        {% get_verbose_name textversion "content" %}
-                    </th>
-                    <td>
-                        {{ object.content|safe }}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        {% get_verbose_name textversion "content" %}
-                    </th>
-                    <td>
-                        <code>
-                            {{ object.content }}
-                        </code>
-                    </td>
-                </tr>
-            </table>
-            <legend>
-                internal info
-            </legend>
-            <table class="table table-bordered table-hover">
-                <tr>
-                    <th>
-                        {% get_verbose_name textversion "legacy_id" %}
-                    </th>
-                    <td>
-                        {{ object.legacy_id }}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        {% get_verbose_name textversion "entered_by" %}
-                    </th>
-                    <td>
-                        {{ object.entered_by }}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        {% get_verbose_name textversion "entered_date" %}
-                    </th>
-                    <td>
-                        {{ object.entered_date }}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        {% get_verbose_name textversion "last_changed" %}
-                    </th>
-                    <td>
-                        {{ object.last_changed }}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        {% get_verbose_name textversion "notes" %}
-                    </th>
-                    <td>
-                        {{ object.notes }}
-                    </td>
-                </tr>
-            </table>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#htmltext" role="tab" aria-controls="htmltext" aria-selected="true">Text</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="markup-tab" data-toggle="tab" href="#markup" role="tab" aria-controls="markup" aria-selected="false">Markup</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="htmltext" role="tabpanel" aria-labelledby="htmltext-tab">
+                    {{ object.content|safe }}
+                </div>
+                <div class="tab-pane fade" id="markup" role="tabpanel" aria-labelledby="markup-tab">
+                    <code>
+                        {{ object.content }}
+                    </code>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+              </div>
         </div>
     </div>
 </div>
