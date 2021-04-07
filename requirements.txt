@@ -1,4 +1,4 @@
-acdh-django-browsing>=0.2.0
+acdh-django-browsing>=0.2.1
 Django==2.2.20
 django-reversion>=3.0.0
 django-shibboleth-remoteuser==0.12
@@ -6,3 +6,4 @@ djangorestframework==3.11.2
 mysqlclient>=2.0.3
 SPARQLWrapper>=1.8.2
 xlrd==1.1.0
+tablib==3.0.0

@@ -57,6 +57,9 @@ class Place(IdProvider):
         max_length=250, blank=True, null=True, verbose_name="Legacy ID"
     )
 
+    def __str__(self):
+        return f"{self.name}"
+
 
 class AssignmentBaseClass(IdProvider):
     legacy_id = models.CharField(
@@ -606,7 +609,7 @@ class Text(AssignmentBaseClass):
     )
     text_type = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="TEXT_TYPE_ID",
+        verbose_name="Text Type",
         help_text="provide some",
         related_name="is_text_type_of",
         on_delete=models.SET_NULL
@@ -710,7 +713,7 @@ class Text(AssignmentBaseClass):
         choices=YES_NO_OTHER
     )
     grade = models.IntegerField(
-        blank=True, null=True, verbose_name="Grade, if available e",
+        blank=True, null=True, verbose_name="Grade, if available",
         help_text="scale 1-5, convert different grading schemes"
     )
     tool = models.CharField(

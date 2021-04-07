@@ -179,9 +179,11 @@ class TextVersionListView(UserPassesTestMixin, GenericListView):
     formhelper_class = TextVersionFilterFormHelper
     init_columns = [
         'legacy_id',
+        'content',
         'text_id__mode',
         'text_id__text_type',
     ]
+    template_name = 'assignments/text_list.html'
 
     def test_func(self):
         access = access_for_shib_and_loggedin(self)

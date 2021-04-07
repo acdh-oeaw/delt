@@ -56,7 +56,7 @@ class TextVersionTable(tables.Table):
         args=[A('pk')], verbose_name='Status'
     )
     text_id__grade = tables.TemplateColumn(
-        template_name='assignments/tables/text_id__grade.html'
+        template_name='assignments/tables/text_id__grade.html',
     )
     text_id__medium = tables.TemplateColumn(
         template_name='assignments/tables/text_id__medium.html',
@@ -70,8 +70,10 @@ class TextVersionTable(tables.Table):
         template_name='assignments/tables/text_id__text_type.html',
         verbose_name=Text._meta.get_field('text_type').verbose_name
     )
-
-    forename = tables.Column()
+    content_plain = tables.TemplateColumn(
+        template_name='assignments/tables/plaintext.html',
+        verbose_name="Text ohne Markup"
+    )
 
     class Meta:
         model = TextVersion

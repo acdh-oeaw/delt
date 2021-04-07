@@ -109,20 +109,41 @@ class TextVersionFilterFormHelper(FormHelper):
         self.helper.form_tag = False
         self.add_input(Submit('Filter', 'Search'))
         self.layout = Layout(
-            Fieldset(
-                'Basic search options',
-                'legacy_id',
-                'text_id__participant_id',
-                'text_id__grade',
-                css_id="basic_search_fields"
-                ),
             Accordion(
                 AccordionGroup(
-                    'Advanced search',
+                    'Text',
                     'text_id__medium',
                     'text_id__mode',
                     'text_id__text_type',
-                    css_id="more"
+                    css_id="basic_search_fields"
+                ),
+            ),
+            Accordion(
+                AccordionGroup(
+                    'Participant',
+                    'text_id__participant_id__learner_id__nationality',
+                    'text_id__participant_id__learner_id__gender',
+                    'text_id__participant_id__institution_level',
+                    'text_id__participant_id__clil',
+                    css_id="participant_gen"
+                    ),
+                ),
+            Accordion(
+                AccordionGroup(
+                    'Participant Language',
+                    'text_id__participant_id__learner_id__lang_l',
+                    'text_id__participant_id__learner_id__lang_mother',
+                    'text_id__participant_id__learner_id__lang_father',
+                    'text_id__participant_id__learner_id__lang_second',
+                    'text_id__participant_id__learner_id__lang_third',
+                    css_id="participant_lang"
+                    ),
+                ),
+            Accordion(
+                AccordionGroup(
+                    'internal',
+                    'legacy_id',
+                    css_id="internal"
                     ),
                 )
             )

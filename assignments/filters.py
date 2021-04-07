@@ -1,4 +1,6 @@
 import django_filters
+from django import forms
+
 
 from vocabs.models import SkosConcept
 from . models import *
@@ -44,21 +46,69 @@ class TextVersionListFilter(django_filters.FilterSet):
         help_text=Text._meta.get_field('participant_id').help_text,
         label=Text._meta.get_field('participant_id').verbose_name
         )
+    text_id__participant_id__learner_id__gender = django_filters.ChoiceFilter(
+        choices=GENDER_CHOICES,
+        help_text="Gender",
+        label="Gender"
+        )
+    text_id__participant_id__institution_level = django_filters.ChoiceFilter(
+        choices=[(x[0], x[0]) for x in list(set(Participant.objects.all().values_list('institution_level')))],
+        help_text="Institution Level",
+        label="Institution Level"
+        )
+    text_id__participant_id__clil = django_filters.ChoiceFilter(
+        choices=YES_NO_OTHER,
+        help_text="clil",
+        label="clil"
+        )
+    text_id__participant_id__learner_id__nationality = django_filters.ModelMultipleChoiceFilter(
+        queryset=Place.objects.all(),
+        help_text="Nationality",
+        label="Nationality"
+        )
+    text_id__participant_id__learner_id__lang_l = django_filters.ModelMultipleChoiceFilter(
+        queryset=SkosConcept.objects.exclude(is_lang_l_of=None),
+        help_text="mother tongue",
+        label="mother tongue"
+        )
+    text_id__participant_id__learner_id__lang_mother = django_filters.ModelMultipleChoiceFilter(
+        queryset=SkosConcept.objects.exclude(is_mother_lang_of=None),
+        help_text="lang mother",
+        label="lang mother"
+        )
+    text_id__participant_id__learner_id__lang_father = django_filters.ModelMultipleChoiceFilter(
+        queryset=SkosConcept.objects.exclude(is_father_lang_of=None),
+        help_text="lang father",
+        label="lang father"
+        )
+    text_id__participant_id__learner_id__lang_second = django_filters.ModelMultipleChoiceFilter(
+        queryset=SkosConcept.objects.exclude(is_second_lang_of=None),
+        help_text="second language",
+        label="second language ≠ foreign language"
+        )
+    text_id__participant_id__learner_id__lang_third = django_filters.ModelMultipleChoiceFilter(
+        queryset=SkosConcept.objects.exclude(is_third_lang_of=None),
+        help_text="third language",
+        label="third language ≠ foreign language"
+        )
     text_id__grade = django_filters.RangeFilter()
     text_id__medium = django_filters.ModelMultipleChoiceFilter(
         queryset=SkosConcept.objects.filter(scheme__dc_title__icontains="text_medium"),
         help_text=Text._meta.get_field('medium').help_text,
-        label=Text._meta.get_field('medium').verbose_name
+        label=Text._meta.get_field('medium').verbose_name,
+        widget=forms.CheckboxSelectMultiple(attrs={'class': 'chbx-select-multi'})
         )
     text_id__mode = django_filters.ModelMultipleChoiceFilter(
         queryset=SkosConcept.objects.filter(scheme__dc_title__icontains="text_mode"),
         help_text=Text._meta.get_field('mode').help_text,
-        label=Text._meta.get_field('mode').verbose_name
+        label=Text._meta.get_field('mode').verbose_name,
+        widget=forms.CheckboxSelectMultiple(attrs={'class': 'chbx-select-multi'})
         )
     text_id__text_type = django_filters.ModelMultipleChoiceFilter(
         queryset=SkosConcept.objects.filter(scheme__dc_title__icontains="text_type"),
         help_text=Text._meta.get_field('text_type').help_text,
-        label=Text._meta.get_field('text_type').verbose_name
+        label=Text._meta.get_field('text_type').verbose_name,
+        widget=forms.CheckboxSelectMultiple(attrs={'class': 'chbx-select-multi'})
         )
 
     class Meta:

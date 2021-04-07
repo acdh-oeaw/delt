@@ -39,3 +39,5 @@ dev_secret.py
 /legacy_data/*.doc
 /*.ipynb
 delt/settings/local.py
+excel-export
+nations.csv
