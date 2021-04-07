@@ -54,6 +54,12 @@
                 <li class="nav-item" role="presentation">
                   <a class="nav-link show active" id="aboutthetext-tab" data-toggle="tab" href="#aboutthetext" role="tab" aria-controls="aboutthetext" aria-selected="true">About the Text</a>
                 </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="participant-tab" data-toggle="tab" href="#participant" role="tab" aria-controls="participant" aria-selected="false">Participiant/Learner</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="assignment-tab" data-toggle="tab" href="#assignment" role="tab" aria-controls="assignment" aria-selected="false">Assignment</a>
+                  </li>
               </ul>
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade" id="htmltext" role="tabpanel" aria-labelledby="htmltext-tab">
@@ -70,9 +76,6 @@
                 </div>
                 <div class="tab-pane fade show active" id="aboutthetext" role="tabpanel" aria-labelledby="aboutthetext-tab">
                     <div class="card-body">
-                        <legend>
-                            Info
-                        </legend>
                         {% for x in object.text_id.all %}
                         <table class="table table-bordered table-hover">
                             <tr>
@@ -152,6 +155,93 @@
                                 <td>{{ x.source }}</td>
                             </tr>
                         </table>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="participant" role="tabpanel" aria-labelledby="participant-tab">
+                    <div class="card-body">
+                        {% for x in object.text_id.all %}
+                        {% with parti=x.participant_id %}
+                        {% with learner=x.participant_id.learner_id %}
+                        <legend>Learner ID {{ learner.id }}</legend>
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>Learner's year of birth</th>
+                                <td>{{ learner.year_of_birth }}</td>
+                            </tr>
+                            <tr>
+                                <th>Learner's gender</th>
+                                <td>{{ learner.gender }}</td>
+                            </tr>
+                            <tr>
+                                <th>Languages</th>
+                                <td>
+                                    <small>Learner's mother tongue: </small>{{ learner.lang_l}}<br />
+                                    <small>Mother's L1: </small>{{ learner.lang_mother}}<br />
+                                    <small>Father's L1: </small>{{ learner.lang_father}}<br />
+                                    <small>second language: </small>{{ learner.lang_second}}<br />
+                                    <small>third language: </small>{{ learner.lang_third}}<br />
+                                </td>
+                            </tr>
+
+                        </table>
+                        <legend>Profils</legend>
+                        {% for pr in learner.has_learner_profile.all %}
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>Year when the profile was filled in</th>
+                                <td>{{ pr.year }}</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    description of language use at home <small>if more than one language is spoken, provide the % of use of each language; format: Bosnian: 50% Slovenian: 50%</small>
+                                </th>
+                                <td>{{ pr.lang_spoken_home }}</td>
+                            </tr>
+                            <th>Languages</th>
+                            <td>
+                                <small>Language of instruction in primary school: </small>{{ pr.lang_instruction_primary }}<br />
+                                <small>Language of instruction in secondary school: </small>{{ pr.lang_instruction_secondary }}<br />
+                            </td>
+                        </table>
+                        {% endfor %}
+
+                        <legend>Participant</legend>
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>Institution ID</th>
+                                <td>{{ parti.institution_id }}</td>
+                            </tr>
+                            <tr>
+                                <th>Level' of the educational institution currently attended <br /><small>primary(PR); lower_secondary(LS); upper_secondary(US); <br />tertiary_university(TU); tertiary_college(TC); further_education(FE)</small></th>
+                                <td>{{ parti.institution_level }}</td>
+                            </tr>
+                            <tr>
+                                <th>Is this a CLIL-participant</th>
+                                <td>{{ parti.clil }}</td>
+                            </tr>
+                        </table>
+                        {% endwith %}
+                        {% endwith %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="assignment" role="tabpanel" aria-labelledby="assignment-tab">
+                    <div class="card-body">
+                        {% for x in object.text_id.all %}
+                        {% with assign=x.assignment_id %}
+                        <legend>Assignment ID {{ assign.id }}</legend>
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>Title of Assignment</th>
+                                <td>{{ assign.title }}</td>
+                            </tr>
+                            <tr>
+                                <th>Description of Assignment</th>
+                                <td>{{ assign.description }}</td>
+                            </tr>
+                        </table>
+                        {% endwith %}
                         {% endfor %}
                     </div>
                 </div>

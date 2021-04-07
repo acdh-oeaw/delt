@@ -47,6 +47,9 @@ class Institution(IdProvider):
         max_length=250, blank=True, null=True, verbose_name="Legacy ID"
     )
 
+    def __str__(self):
+        return f"{self.name}"
+
 
 class Place(IdProvider):
     name = models.CharField(
