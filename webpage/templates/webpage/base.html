@@ -73,53 +73,14 @@
                                     <a class="dropdown-item" href="{% url 'webpage:staticpage' template='about' %}">About</a>
                                     <a class="dropdown-item" href="{% url 'webpage:staticpage' template='terms-of-use' %}">Terms of Use</a>
                                     <a class="dropdown-item" href="{% url 'webpage:staticpage' template='imprint' %}">Imprint | Impressum</a>
-                                    {% if SHIB or user.is_authenticated %}
-                                        <a class="dropdown-item" href="{% url 'charts:chart_selector' %}">Charts</a>
-                                    {% endif %}
                                 </div>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item">
                                 {% if SHIB or user.is_authenticated %}
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse the Data
-                                <span class="caret"/>
-                                </a>
-                                <div class="dropdown-menu">
-                                    {% nav_menu app='assignments' as links %}
-                                    {% for x in links %}
-                                        <a class="dropdown-item" href="{{ x.link}}">{{ x.name }}</a>
-                                    {% endfor %}
-                                </div>
+                                <a href="{% url 'assignments:browse_textversions' %}" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">Browse Texts
                                 {% else %}
                                 {% endif %}
-
                             </li>
-                    {% if 'sparql' in APPS %}
-                        <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Retrieve the Data
-                        <span class="caret"/>
-                        </a>
-                            <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{% url 'sparql:query' %}">SPARQL</a>
-                            </div>
-                        </li>
-                    {% endif %}
-                    {% if 'vocabs' in APPS %}
-                        {% if user.is_authenticated %}
-                            <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vocabs Curation
-                            <span class="caret"/>
-                            </a>
-                                <div class="dropdown-menu">
-                                    {% nav_menu app='vocabs' as links %}
-                                    {% for x in links %}
-                                        <a class="dropdown-item" href="{{ x.link }}">{{ x.name }}</a>
-                                    {% endfor %}
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{% url 'api-root' %}">Export SKOS (API)</a>
-                                </div>
-                            </li>
-                        {% endif %}
-                    {% endif %}
                     {% if SHIB or user.is_authenticated %}
                     <li class="nav-item dropdown ml-auto">
                         <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
