@@ -150,6 +150,13 @@ class TextVersionFilterFormHelper(FormHelper):
                 ),
             Accordion(
                 AccordionGroup(
+                    'CLIL',
+                    'text_id__clil_text',
+                    css_id="clil"
+                    ),
+                ),
+            Accordion(
+                AccordionGroup(
                     'internal',
                     'legacy_id',
                     css_id="internal"

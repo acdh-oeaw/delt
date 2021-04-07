@@ -46,25 +46,115 @@
         <div class="card-body">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#htmltext" role="tab" aria-controls="htmltext" aria-selected="true">Text</a>
+                  <a class="nav-link" id="home-tab" data-toggle="tab" href="#htmltext" role="tab" aria-controls="htmltext" aria-selected="false">Text</a>
                 </li>
                 <li class="nav-item" role="presentation">
                   <a class="nav-link" id="markup-tab" data-toggle="tab" href="#markup" role="tab" aria-controls="markup" aria-selected="false">Markup</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                  <a class="nav-link show active" id="aboutthetext-tab" data-toggle="tab" href="#aboutthetext" role="tab" aria-controls="aboutthetext" aria-selected="true">About the Text</a>
                 </li>
               </ul>
               <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="htmltext" role="tabpanel" aria-labelledby="htmltext-tab">
-                    {{ object.content|safe }}
+                <div class="tab-pane fade" id="htmltext" role="tabpanel" aria-labelledby="htmltext-tab">
+                    <div class="card-body">
+                        {{ object.content|safe }}
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="markup" role="tabpanel" aria-labelledby="markup-tab">
-                    <code>
-                        {{ object.content }}
-                    </code>
+                    <div class="card-body">
+                        <code>
+                            {{ object.content }}
+                        </code>
+                    </div>
                 </div>
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                <div class="tab-pane fade show active" id="aboutthetext" role="tabpanel" aria-labelledby="aboutthetext-tab">
+                    <div class="card-body">
+                        <legend>
+                            Info
+                        </legend>
+                        {% for x in object.text_id.all %}
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>ID</th>
+                                <td>{{ x.id }}</td>
+                            </tr>
+                            <tr>
+                                <th>Text Type</th>
+                                <td>{{ x.text_type }}</td>
+                            </tr>
+                            <!-- <tr>
+                                <th>Profile(s) signed?</th>
+                                <td>{{ x.availability }}</td>
+                            </tr> -->
+                            <!-- <tr>
+                                <th>Year the text was produced</th>
+                                <td>{{ x.year }}</td>
+                            </tr> -->
+                            <!-- <tr>
+                                <th>Semester</th>
+                                <td>{{ x.semester }}</td>
+                            </tr> -->
+                            <!-- <tr>
+                                <th>Language the text is written/spoken in</th>
+                                <td>{{ x.lang }}</td>
+                            </tr> -->
+                            <tr>
+                                <th>Medium: spoken, written, <abbr title="computer mediated communication">CMC</abbr></th>
+                                <td>{{ x.medium }}</td>
+                            </tr>
+                            <tr>
+                                <th><abbr title="Type of samples (cf. Ellis & Barkhuizen): naturally occurring, clinically elicited, experimentally elicited"">Type of samples</abbr></th>
+                                <td>{{ x.data_type }}</td>
+                            </tr>
+                            <tr>
+                                <th>recording</th>
+                                <td>{{ x.recording }}</td>
+                            </tr>
+                            <tr>
+                                <th>Recording method used (audio/video)</th>
+                                <td>{{ x.recoding_method }}</td>
+                            </tr>
+                            <tr>
+                                <th>Mode of writing <small>argumentative, descriptive, expository, narrative; other)</small></th>
+                                <td>{{ x.mode }}</td>
+                            </tr>
+                            <tr>
+                                <th>Produced in a CLIL context <small>E.g. a recording of a biology course taught in English)</small></th>
+                                <td>{{ x.clil_text }}</td>
+                            </tr>
+                            <tr>
+                                <th>Subject taught through CLIL</th>
+                                <td>{{ x.clil_subject }}</td>
+                            </tr>
+                            <tr>
+                                <th>Produced in a timed context?</th>
+                                <td>{{ x.timed }}</td>
+                            </tr>
+                            <tr>
+                                <th>Produced in an exam?</th>
+                                <td>{{ x.exam }}</td>
+                            </tr>
+                            <tr>
+                                <th>Grade, if available <small>scale 1-5, convert different grading schemes</small></th>
+                                <td>{{ x.grade }}</td>
+                            </tr>
+                            <tr>
+                                <th>Were tools used?</th>
+                                <td>{{ x.tool }}</td>
+                            </tr>
+                            <tr>
+                                <th>Text title</th>
+                                <td>{{ x.title }}</td>
+                            </tr>
+                            <tr>
+                                <th>Text source <small>handwritten / born digital / recording_audio / recording_video</small></th>
+                                <td>{{ x.source }}</td>
+                            </tr>
+                        </table>
+                        {% endfor %}
+                    </div>
+                </div>
               </div>
         </div>
     </div>

@@ -129,6 +129,12 @@ class TextVersionListFilter(django_filters.FilterSet):
         label=Text._meta.get_field('text_type').verbose_name,
         widget=forms.CheckboxSelectMultiple(attrs={'class': 'chbx-select-multi'})
         )
+    text_id__clil_text = django_filters.ChoiceFilter(
+        choices=[(x[0], x[0]) for x in list(set(Text.objects.all().values_list('clil_text')))],
+        help_text="(if more than one language is spoken, provide the % of use of each language)\
+        format: Bosnian: 50% Slovenian: 50%",
+        label="description of language use at home"
+        )
 
     class Meta:
         model = TextVersion
