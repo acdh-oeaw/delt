@@ -7,7 +7,7 @@ django-filter==2.0.0
 django-reversion==3.0.0
 django-shibboleth-remoteuser==0.12
 django-tables2==2.0.1
-djangorestframework==3.9.1
+djangorestframework==3.11.2
 jupyter==1.0.0
 mysqlclient>=2.0.3
 notebook==6.1.5
