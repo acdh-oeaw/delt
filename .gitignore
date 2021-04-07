@@ -38,3 +38,4 @@ dev_secret.py
 /arche/data/fileList.json
 /legacy_data/*.doc
 /*.ipynb
+delt/settings/local.py

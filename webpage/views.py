@@ -14,9 +14,6 @@ class GenericWebpageView(TemplateView):
         context = super(GenericWebpageView, self).get_context_data(**kwargs)
         context['apps'] = settings.INSTALLED_APPS
         context['meta'] = self.request.META
-        for key, value in self.request.META.items():
-            print("{}: {}".format(key, value))
-        print(context['meta'])
         return context
 
     def get_template_names(self):
