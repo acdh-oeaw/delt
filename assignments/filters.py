@@ -61,6 +61,7 @@ class TextVersionListFilter(django_filters.FilterSet):
         help_text="clil",
         label="clil"
         )
+
     text_id__participant_id__learner_id__nationality = django_filters.ModelMultipleChoiceFilter(
         queryset=Place.objects.all(),
         help_text="Nationality",
@@ -91,6 +92,24 @@ class TextVersionListFilter(django_filters.FilterSet):
         help_text="third language",
         label="third language ≠ foreign language"
         )
+
+    text_id__participant_id__learner_profile_id__lang_spoken_home = django_filters.ChoiceFilter(
+        choices=[(x[0], x[0]) for x in list(set(LearnerProfile.objects.all().values_list('lang_spoken_home')))],
+        help_text="(if more than one language is spoken, provide the % of use of each language)\
+        format: Bosnian: 50% Slovenian: 50%",
+        label="description of language use at home"
+        )
+    text_id__participant_id__learner_profile_id__lang_instruction_primary = django_filters.ModelMultipleChoiceFilter(
+        queryset=SkosConcept.objects.exclude(is_lang_instruction_primary=None),
+        help_text="Language of instruction in primary school",
+        label="Language of instruction in primary school"
+        )
+    text_id__participant_id__learner_profile_id__proficiency_level = django_filters.ChoiceFilter(
+        choices=[(x[0], x[0]) for x in list(set(LearnerProfile.objects.all().values_list('proficiency_level')))],
+        help_text="A1;A2;B1;B2;C1;C2",
+        label="Latest CEF score/placement"
+        )
+
     text_id__grade = django_filters.RangeFilter()
     text_id__medium = django_filters.ModelMultipleChoiceFilter(
         queryset=SkosConcept.objects.filter(scheme__dc_title__icontains="text_medium"),

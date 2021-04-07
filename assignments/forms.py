@@ -141,6 +141,15 @@ class TextVersionFilterFormHelper(FormHelper):
                 ),
             Accordion(
                 AccordionGroup(
+                    'Learner Profile',
+                    'text_id__participant_id__learner_profile_id__lang_spoken_home',
+                    'text_id__participant_id__learner_profile_id__lang_instruction_primary',
+                    'text_id__participant_id__learner_profile_id__proficiency_level',
+                    css_id="learner_profile"
+                    ),
+                ),
+            Accordion(
+                AccordionGroup(
                     'internal',
                     'legacy_id',
                     css_id="internal"
