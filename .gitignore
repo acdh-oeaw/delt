@@ -41,3 +41,5 @@ dev_secret.py
 delt/settings/local.py
 excel-export
 nations.csv
+*.zip
+dump.json

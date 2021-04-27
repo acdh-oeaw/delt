@@ -1,3 +1,8 @@
+import datetime
+import time
+from io import BytesIO
+from zipfile import ZipFile
+
 from django.urls import reverse, reverse_lazy
 from django.shortcuts import render
 from django.views.generic.detail import DetailView
@@ -5,6 +10,8 @@ from django.views.generic.edit import DeleteView
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.http import HttpResponse
+
 
 from django_tables2 import RequestConfig
 
@@ -211,6 +218,25 @@ class TextVersionListView(UserPassesTestMixin, GenericListView):
         exclude_vals = [x for x in all_cols if x not in selected_cols]
         table.exclude = exclude_vals
         return table
+    
+    def render_to_response(self, context, **kwargs):
+        download = self.request.GET.get('zip', None)
+        if download:
+            zipped_file = BytesIO()
+            timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d-%H-%M-%S')
+            zip_name = f"export_{timestamp}.zip"
+            texts = self.get_queryset()
+            with ZipFile(zipped_file, 'w') as zipped:
+                for x in texts:
+                    file_name = f"text__{x.id}.txt"
+                    zipped.writestr(file_name, f"{x.content}")
+            zipped_file.seek(0)
+            response = HttpResponse(zipped_file, content_type='application/octet-stream')
+            response['Content-Disposition'] = f'attachment; filename={timestamp}.zip'
+            return response
+        else:
+            response = super(GenericListView, self).render_to_response(context)
+            return response
 
 
 class TextVersionDetailView(UserPassesTestMixin, DetailView):
