@@ -11,9 +11,9 @@ class AssignmentAdmin(admin.ModelAdmin):
 
 class LearnerAdmin(admin.ModelAdmin):
     list_display = (
-        'year_of_birth', 'lang_l', 'lang_father', 'lang_mother', 'lang_second', 'lang_third'
+        'year_of_birth', 'nationality', 'lang_l', 'lang_father', 'lang_mother', 'lang_second', 'lang_third'
     )
-    list_filter = ['gender', 'entered_by', 'year_of_birth']
+    list_filter = ['gender', 'nationality', 'year_of_birth']
 
 
 class LearnerProfileAdmin(admin.ModelAdmin):
