@@ -34,6 +34,11 @@ class TextListFilter(django_filters.FilterSet):
         model = Text
         fields = "__all__"
 
+TITLE_LOOKUP_CHOICES = [
+    ('exact', 'exact'),
+    ('icontains', 'contains')
+
+]
 
 class TextVersionListFilter(django_filters.FilterSet):
     legacy_id = django_filters.CharFilter(
@@ -135,11 +140,18 @@ class TextVersionListFilter(django_filters.FilterSet):
         format: Bosnian: 50% Slovenian: 50%",
         label="description of language use at home"
         )
-    text_id__assignment_id__title = django_filters.CharFilter(
-        lookup_expr='icontains',
+    text_id__assignment_id__title_choices = django_filters.ModelMultipleChoiceFilter(
+        queryset=Assignment.objects,
+        help_text=Assignment._meta.get_field('title').help_text,
+        label='Select Assignment Title',
+        widget=forms.CheckboxSelectMultiple(attrs={'class': 'chbx-select-multi'})
+    )
+    text_id__assignment_id__title = django_filters.LookupChoiceFilter(
+        field_class=forms.CharField,
+        lookup_choices=TITLE_LOOKUP_CHOICES,
         help_text=Assignment._meta.get_field('title').help_text,
         label=Assignment._meta.get_field('title').verbose_name
-    )
+        ) 
 
     class Meta:
         model = TextVersion
