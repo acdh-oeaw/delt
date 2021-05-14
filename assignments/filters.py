@@ -135,6 +135,11 @@ class TextVersionListFilter(django_filters.FilterSet):
         format: Bosnian: 50% Slovenian: 50%",
         label="description of language use at home"
         )
+    text_id__assignment_id__title = django_filters.CharFilter(
+        lookup_expr='icontains',
+        help_text=Assignment._meta.get_field('title').help_text,
+        label=Assignment._meta.get_field('title').verbose_name
+    )
 
     class Meta:
         model = TextVersion

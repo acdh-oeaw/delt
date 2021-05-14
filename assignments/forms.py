@@ -120,6 +120,13 @@ class TextVersionFilterFormHelper(FormHelper):
             ),
             Accordion(
                 AccordionGroup(
+                    'Assignment',
+                    'text_id__assignment_id__title',
+                    css_id="assignment_id_title"
+                )
+            ),
+            Accordion(
+                AccordionGroup(
                     'Participant',
                     'text_id__participant_id__learner_id__nationality',
                     'text_id__participant_id__learner_id__gender',
