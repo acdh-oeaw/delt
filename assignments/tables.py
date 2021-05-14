@@ -74,7 +74,7 @@ class TextVersionTable(tables.Table):
         template_name='assignments/tables/plaintext.html',
         verbose_name="Text ohne Markup"
     )
-    text_id__assignment_id = tables.TemplateColumn(
+    Assignment = tables.TemplateColumn(
         template_name='assignments/tables/text_id__assignment.html',
         verbose_name=Assignment._meta.get_field('title').verbose_name
     )

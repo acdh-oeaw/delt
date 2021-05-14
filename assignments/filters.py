@@ -41,8 +41,9 @@ TITLE_LOOKUP_CHOICES = [
 ]
 
 class TextVersionListFilter(django_filters.FilterSet):
-    legacy_id = django_filters.CharFilter(
-        lookup_expr='icontains',
+    legacy_id = django_filters.LookupChoiceFilter(
+        field_class=forms.CharField,
+        lookup_choices=TITLE_LOOKUP_CHOICES,
         help_text=TextVersion._meta.get_field('legacy_id').help_text,
         label=TextVersion._meta.get_field('legacy_id').verbose_name
         )
@@ -145,7 +146,7 @@ class TextVersionListFilter(django_filters.FilterSet):
         help_text=Assignment._meta.get_field('title').help_text,
         label='Select Assignment Title',
         widget=forms.CheckboxSelectMultiple(attrs={'class': 'chbx-select-multi'})
-    )
+        )
     text_id__assignment_id__title = django_filters.LookupChoiceFilter(
         field_class=forms.CharField,
         lookup_choices=TITLE_LOOKUP_CHOICES,
