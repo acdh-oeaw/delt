@@ -6,9 +6,15 @@ from vocabs.models import SkosConcept
 from . models import *
 
 
+LOOKUP_CHOICES = [
+    ('exact', 'exact'),
+    ('icontains', 'contains')
+]
+
 class AssignmentListFilter(django_filters.FilterSet):
-    title = django_filters.CharFilter(
-        lookup_expr='icontains',
+    title = django_filters.LookupChoiceFilter(
+        field_class=forms.CharField,
+        lookup_choices=LOOKUP_CHOICES,
         help_text=Assignment._meta.get_field('title').help_text,
         label=Assignment._meta.get_field('title').verbose_name
         )
@@ -24,8 +30,9 @@ class AssignmentListFilter(django_filters.FilterSet):
 
 
 class TextListFilter(django_filters.FilterSet):
-    legacy_id = django_filters.CharFilter(
-        lookup_expr='icontains',
+    legacy_id = django_filters.LookupChoiceFilter(
+        field_class=forms.CharField,
+        lookup_choices=LOOKUP_CHOICES,
         help_text=Text._meta.get_field('legacy_id').help_text,
         label=Text._meta.get_field('legacy_id').verbose_name
         )
@@ -34,16 +41,10 @@ class TextListFilter(django_filters.FilterSet):
         model = Text
         fields = "__all__"
 
-TITLE_LOOKUP_CHOICES = [
-    ('exact', 'exact'),
-    ('icontains', 'contains')
-
-]
-
 class TextVersionListFilter(django_filters.FilterSet):
     legacy_id = django_filters.LookupChoiceFilter(
         field_class=forms.CharField,
-        lookup_choices=TITLE_LOOKUP_CHOICES,
+        lookup_choices=LOOKUP_CHOICES,
         help_text=TextVersion._meta.get_field('legacy_id').help_text,
         label=TextVersion._meta.get_field('legacy_id').verbose_name
         )
@@ -149,7 +150,7 @@ class TextVersionListFilter(django_filters.FilterSet):
         )
     text_id__assignment_id__title = django_filters.LookupChoiceFilter(
         field_class=forms.CharField,
-        lookup_choices=TITLE_LOOKUP_CHOICES,
+        lookup_choices=LOOKUP_CHOICES,
         help_text=Assignment._meta.get_field('title').help_text,
         label=Assignment._meta.get_field('title').verbose_name
         ) 
