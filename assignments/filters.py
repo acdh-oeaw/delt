@@ -140,7 +140,7 @@ class TextVersionListFilter(django_filters.FilterSet):
         format: Bosnian: 50% Slovenian: 50%",
         label="description of language use at home"
         )
-    text_id__assignment_id__title_choices = django_filters.ModelMultipleChoiceFilter(
+    text_id__assignment_id = django_filters.ModelMultipleChoiceFilter(
         queryset=Assignment.objects,
         help_text=Assignment._meta.get_field('title').help_text,
         label='Select Assignment Title',
