@@ -122,7 +122,7 @@ class TextVersionFilterFormHelper(FormHelper):
                 AccordionGroup(
                     'Assignment',
                     'text_id__assignment_id',
-                    'text_id__assignment_id__title_choices',                    
+                    'text_id__assignment_id__title',                    
                     css_id="assignment_id_title"
                 )
             ),
