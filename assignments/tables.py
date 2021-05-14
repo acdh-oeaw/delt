@@ -76,7 +76,7 @@ class TextVersionTable(tables.Table):
     )
     text_id__assignment_id = tables.TemplateColumn(
         template_name='assignments/tables/text_id__assignment.html',
-        verbose_name="Assignment Title"
+        verbose_name=Assignment._meta.get_field('title').verbose_name
     )
 
     class Meta:
