@@ -49,7 +49,7 @@ class TextVersionTable(tables.Table):
     text_id = tables.ManyToManyColumn()
     legacy_id = tables.LinkColumn(
         'assignments:textversion_detail',
-        args=[A('pk')], verbose_name=' Column ID'
+        args=[A('pk')], verbose_name='Column ID'
     )
     status = tables.LinkColumn(
         'assignments:textversion_detail',
@@ -79,6 +79,55 @@ class TextVersionTable(tables.Table):
         template_name='assignments/tables/text_id__assignment.html',
         verbose_name=Assignment._meta.get_field('title').verbose_name
     )
+    Participant_Institution_Level= tables.TemplateColumn(
+        template_name='assignments/tables/text_id__participant_institution_level.html',
+        verbose_name=Participant._meta.get_field('institution_level').verbose_name
+    )
+    Participant_clil= tables.TemplateColumn(
+        template_name='assignments/tables/text_id__participant_clil.html',
+        verbose_name=Participant._meta.get_field('clil').verbose_name
+    )
+    Learner_Gender = tables.TemplateColumn(
+        template_name='assignments/tables/text_id__learner_gender.html',
+        verbose_name=Learner._meta.get_field('gender').verbose_name
+    )
+    Learner_Nationality = tables.TemplateColumn(
+        template_name='assignments/tables/text_id__learner_nationality.html',
+        verbose_name=Learner._meta.get_field('nationality').verbose_name
+    )
+    Learner_Mother_Tongue = tables.TemplateColumn(
+        template_name='assignments/tables/text_id__learner_lang_l.html',
+        verbose_name=Learner._meta.get_field('lang_l').verbose_name
+    )
+    Learner_Mother = tables.TemplateColumn(
+        template_name='assignments/tables/text_id__learner_lang_mother.html',
+        verbose_name=Learner._meta.get_field('lang_mother').verbose_name
+    )
+    Learner_Father = tables.TemplateColumn(
+        template_name='assignments/tables/text_id__learner_lang_father.html',
+        verbose_name=Learner._meta.get_field('lang_father').verbose_name
+    )
+    Learner_Second_Language= tables.TemplateColumn(
+        template_name='assignments/tables/text_id__learner_lang_second.html',
+        verbose_name=Learner._meta.get_field('lang_second').verbose_name
+    )
+    Learner_Third_Language= tables.TemplateColumn(
+        template_name='assignments/tables/text_id__learner_lang_third.html',
+        verbose_name=Learner._meta.get_field('lang_third').verbose_name
+    )
+    Learner_Profile_Language_Spoken_Home= tables.TemplateColumn(
+        template_name='assignments/tables/text_id__learner_profile_lang_spoken_home.html',
+        verbose_name=LearnerProfile._meta.get_field('lang_spoken_home').verbose_name
+    )
+    Learner_Profile_Language_Instruction_Primary= tables.TemplateColumn(
+        template_name='assignments/tables/text_id__learner_profile_lang_instruction_primary.html',
+        verbose_name=LearnerProfile._meta.get_field('lang_instruction_primary').verbose_name
+    )
+    Learner_Profile_Proficiency_Level= tables.TemplateColumn(
+        template_name='assignments/tables/text_id__learner_profile_proficiency_level.html',
+        verbose_name=LearnerProfile._meta.get_field('proficiency_level').verbose_name
+    )
+
 
     class Meta:
         model = TextVersion
