@@ -40,7 +40,7 @@ class Person(IdProvider):
 
 class Institution(IdProvider):
     name = models.CharField(
-        max_length=250, blank=True, null=True, verbose_name="name",
+        max_length=250, blank=True, null=True, verbose_name="Institution Name",
         help_text="The institution's name"
     )
     legacy_id = models.CharField(
@@ -53,7 +53,7 @@ class Institution(IdProvider):
 
 class Place(IdProvider):
     name = models.CharField(
-        max_length=250, blank=True, null=True, verbose_name="name",
+        max_length=250, blank=True, null=True, verbose_name="Place Name",
         help_text="The place's name"
     )
     legacy_id = models.CharField(
@@ -70,7 +70,8 @@ class AssignmentBaseClass(IdProvider):
     )
     entered_by = models.ForeignKey(
         Person, null=True, blank=True,
-        help_text="Person who entered Assignment",
+        verbose_name="Entered by",
+        help_text="Person who entered the Assignment",
         related_name="has_entered_assignment",
         on_delete=models.SET_NULL
     )
@@ -86,7 +87,7 @@ class AssignmentBaseClass(IdProvider):
     )
     notes = models.TextField(
         blank=True, null=True, verbose_name="Learners Note",
-        help_text="provide some"
+        help_text="Notes of the Learner"
     )
 
     def field_dict(self):
@@ -605,22 +606,22 @@ class Text(AssignmentBaseClass):
 
     participant_id = models.ForeignKey(
         Participant, null=True, blank=True,
-        verbose_name="participant_id",
-        help_text="provide some",
+        verbose_name="Participant ID",
+        help_text="Participant Identification Number",
         related_name="text_has_participants",
         on_delete=models.SET_NULL
     )
     text_type = models.ForeignKey(
         SkosConcept, null=True, blank=True,
         verbose_name="Text Type",
-        help_text="provide some",
+        help_text="Skos Concept conform Text Type",
         related_name="is_text_type_of",
         on_delete=models.SET_NULL
     )
     assignment_id = models.ForeignKey(
         Assignment, null=True, blank=True,
-        verbose_name="assignment_id",
-        help_text="provide some",
+        verbose_name="Assignment ID",
+        help_text="Assignment Identification Number",
         related_name="has_text",
         on_delete=models.SET_NULL
     )
@@ -667,14 +668,14 @@ class Text(AssignmentBaseClass):
     )
     recording = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="recording",
-        help_text="provide some",
+        verbose_name="Recording",
+        help_text="Recording",
         related_name="is_recording",
         on_delete=models.SET_NULL
     )
     recoding_method = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="Recording method used ",
+        verbose_name="Recording method used",
         help_text="audio/video",
         related_name="is_recoding_method",
         on_delete=models.SET_NULL
@@ -783,29 +784,30 @@ class TextVersion(AssignmentBaseClass):
 
     text_id = models.ManyToManyField(
         Text, blank=True,
-        verbose_name="text_id",
-        help_text="provide some",
+        verbose_name="Text ID",
+        help_text="Text Identification Number",
         related_name="has_text_version",
     )
     status = models.ForeignKey(
         SkosConcept, null=True, blank=True,
-        verbose_name="text_version_status",
-        help_text="provide some",
+        verbose_name="Text Version Status",
+        help_text="Skos Concept conform Text Status",
         related_name="is_text_version_status",
         on_delete=models.SET_NULL
     )
     link = models.CharField(
-        max_length=250, blank=True, verbose_name="text_version_link",
-        help_text="provide some"
+        max_length=250, blank=True, verbose_name="Text Version Link",
+        help_text="Link to a specific Text Version"
     )
     content = models.TextField(
-        blank=True, null=True, verbose_name="text_content",
-        help_text="provide some"
+        blank=True, null=True, 
+        verbose_name="Text with Markup",
+        help_text="Text Content with HTML Markup"
     )
 
     class Meta:
         ordering = ['id']
-        verbose_name = "TextVersion"
+        verbose_name = "Text Version"
 
     @classmethod
     def get_listview_url(self):

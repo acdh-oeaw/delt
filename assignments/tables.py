@@ -49,16 +49,17 @@ class TextVersionTable(tables.Table):
     text_id = tables.ManyToManyColumn()
     legacy_id = tables.LinkColumn(
         'assignments:textversion_detail',
-        args=[A('pk')], verbose_name='ID'
+        args=[A('pk')], verbose_name=' Column ID'
     )
     status = tables.LinkColumn(
         'assignments:textversion_detail',
         args=[A('pk')], verbose_name='Status'
     )
-    text_id__grade = tables.TemplateColumn(
+    Grade = tables.TemplateColumn(
         template_name='assignments/tables/text_id__grade.html',
+        verbose_name="Grade"
     )
-    text_id__medium = tables.TemplateColumn(
+    Medium = tables.TemplateColumn(
         template_name='assignments/tables/text_id__medium.html',
         verbose_name=Text._meta.get_field('medium').verbose_name
     )
@@ -70,9 +71,9 @@ class TextVersionTable(tables.Table):
         template_name='assignments/tables/text_id__text_type.html',
         verbose_name=Text._meta.get_field('text_type').verbose_name
     )
-    content_plain = tables.TemplateColumn(
+    Text = tables.TemplateColumn(
         template_name='assignments/tables/plaintext.html',
-        verbose_name="Text ohne Markup"
+        verbose_name="Text without Markup",
     )
     Assignment = tables.TemplateColumn(
         template_name='assignments/tables/text_id__assignment.html',
