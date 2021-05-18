@@ -187,6 +187,7 @@ class TextVersionListView(UserPassesTestMixin, GenericListView):
     init_columns = [
         'legacy_id',
         'content',
+        'Plain_Text',
         'text_id__mode',
         'text_id__text_type',
     ]
@@ -221,6 +222,7 @@ class TextVersionListView(UserPassesTestMixin, GenericListView):
     
     def render_to_response(self, context, **kwargs):
         download = self.request.GET.get('zip', None)
+        download_plain = self.request.GET.get('zip_plain', None)
         if download:
             zipped_file = BytesIO()
             timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d-%H-%M-%S')
@@ -234,10 +236,22 @@ class TextVersionListView(UserPassesTestMixin, GenericListView):
             response = HttpResponse(zipped_file, content_type='application/octet-stream')
             response['Content-Disposition'] = f'attachment; filename={timestamp}.zip'
             return response
+        elif download_plain:
+            zipped_file = BytesIO()
+            timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d-%H-%M-%S')
+            zip_name = f"export_{timestamp}.zip"
+            texts = self.get_queryset()
+            with ZipFile(zipped_file, 'w') as zipped:
+                for x in texts:
+                    file_name = f"text__{x.id}.txt"
+                    zipped.writestr(file_name, f"{x.get_plain_text()}")
+            zipped_file.seek(0)
+            response = HttpResponse(zipped_file, content_type='application/octet-stream')
+            response['Content-Disposition'] = f'attachment; filename={timestamp}.zip'
+            return response
         else:
             response = super(GenericListView, self).render_to_response(context)
-            return response
-
+            return response  
 
 class TextVersionDetailView(UserPassesTestMixin, DetailView):
     model = TextVersion
