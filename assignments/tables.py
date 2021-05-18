@@ -63,6 +63,10 @@ class TextVersionTable(tables.Table):
         template_name='assignments/tables/text_id__medium.html',
         verbose_name=Text._meta.get_field('medium').verbose_name
     )
+    content = tables.TemplateColumn(
+        template_name='assignments/tables/content.html',
+        verbose_name=TextVersion._meta.get_field('content').verbose_name
+    )
     text_id__mode = tables.TemplateColumn(
         template_name='assignments/tables/text_id__mode.html',
         verbose_name=Text._meta.get_field('mode').verbose_name

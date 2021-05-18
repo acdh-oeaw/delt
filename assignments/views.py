@@ -186,7 +186,6 @@ class TextVersionListView(UserPassesTestMixin, GenericListView):
     formhelper_class = TextVersionFilterFormHelper
     init_columns = [
         'legacy_id',
-        'content',
         'Plain_Text',
         'text_id__mode',
         'text_id__text_type',
