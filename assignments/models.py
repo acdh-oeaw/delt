@@ -847,4 +847,6 @@ class TextVersion(AssignmentBaseClass):
             soup = BeautifulSoup(text, 'html5lib')
             plain_text = soup.get_text()
             return "{}".format(plain_text)
+        else:
+            return "None"    
     
