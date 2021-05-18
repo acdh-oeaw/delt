@@ -3,6 +3,7 @@ from django.urls import reverse
 from idprovider.models import IdProvider
 from vocabs.models import SkosConcept
 from browsing.browsing_utils import model_to_dict
+from bs4 import BeautifulSoup
 
 GENDER_CHOICES = (
     ('male', 'male'),
@@ -839,3 +840,11 @@ class TextVersion(AssignmentBaseClass):
             return "{}".format(self.status)
         else:
             return "{}".format(self.id)
+        
+    def get_plain_text(self):
+        if self.content:            
+            text = self.content
+            soup = BeautifulSoup(text, 'html5lib')
+            plain_text = soup.get_text()
+            return "{}".format(plain_text)
+    

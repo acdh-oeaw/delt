@@ -127,6 +127,10 @@ class TextVersionTable(tables.Table):
         template_name='assignments/tables/text_id__learner_profile_proficiency_level.html',
         verbose_name=LearnerProfile._meta.get_field('proficiency_level').verbose_name
     )
+    Plain_Text = tables.TemplateColumn(
+        template_name='assignments/tables/text_id__plain_text.html',
+        verbose_name='Plain Text'
+    )
 
 
     class Meta:
