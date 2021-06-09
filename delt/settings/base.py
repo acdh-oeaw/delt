@@ -152,3 +152,5 @@ VOCABS_SETTINGS = {
     'default_ns': "http://www.vocabs/{}/".format(VOCABS_DEFAULT_PEFIX),
     'default_lang': "en"
 }
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
