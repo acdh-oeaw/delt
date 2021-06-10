@@ -1,0 +1,4135 @@
+[
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:12.287Z",
+            "updated_at": "2018-10-10T09:29:12.287Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:30:22.529Z",
+            "updated_at": "2018-10-10T09:30:22.755Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 124
+    },
+    {
+        "fields": {
+            "legacy_id": null,
+            "name": "Barbara Schiftner"
+        },
+        "model": "assignments.person",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:12.375Z",
+            "updated_at": "2018-10-10T09:29:12.394Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-01-22",
+            "last_changed": "2008-10-16",
+            "legacy_id": "1",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 124
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-01-22",
+            "last_changed": "2012-08-05",
+            "legacy_id": "3",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:12.346Z",
+            "updated_at": "2018-10-10T09:29:12.346Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "entered_by": 4,
+            "entered_date": "2008-01-14",
+            "last_changed": "2012-08-05",
+            "legacy_id": "2",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "legacy_id": null,
+            "name": "nan"
+        },
+        "model": "assignments.person",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:12.325Z",
+            "updated_at": "2018-10-10T09:29:12.356Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "assignment_desc_link": "2007W_ILSS1_Why_English.pdf",
+            "description": "QUESTIONS\r\n\r\n1. When did you first encounter English?\r\n2. Since when have you been learning the language?\r\n3. Have you ever been to an English-speaking country?\r\nIf yes, when \u2013 doing what \u2013 for how long?\r\nIf no, are you planning to go?\r\nIf you are planning to go, when \u2013 doing what \u2013 for how long?\r\n4. What kind of activities do you do in English regularly (e.g. watch TV, see films, talk to people, write letters, e-mails \u2026)?\r\n5. What kind of reading do you do in English? (Please give some details: latest book you have read, newspapers, magazines etc.)\r\n6. What do you expect to gain from doing this course? Are you doing this as part of your regular English Studies programme?\r\nIf yes, what made you decide to take up the subject \u201eEnglish\u201f at university?\r\nIf no, why are you doing courses at the English Department?\r\n\r\n\r\nINTRODUCTORY EXERCISE\r\n\r\n- Please write a coherent text with the title \"Why English?\"\r\n\r\n- It should include the answers to questions 1-6 above [see scanned original]. You are addressing your new teacher. Your intention is to provide with information about you and English, producing a kind of \"learner autobiography\".\r\n\r\n- The purpose of this guided writing exercise is to find out more about your productive skills in English. You will receive comprehensive feedback on your work.\r\n\r\n- Your piece of writing should be not less than a page. You have 30 minutes to do this exercise.\r\n\r\n!! --> same task as \"ILSS1_08W_Why_English\"",
+            "title": "ILSS1_07W_Why_English"
+        },
+        "model": "assignments.assignment",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "assignment_desc_link": "2007W_ILSS1_Managing_your_study_time.pdf",
+            "description": "Summary of the text \"Managing your study time\"; exact task description n.a.",
+            "title": "ILSS1_07W_Managing_your_study_time"
+        },
+        "model": "assignments.assignment",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:14.027Z",
+            "updated_at": "2018-10-10T09:29:14.027Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 44
+    },
+    {
+        "fields": {
+            "isoCode": "eng",
+            "label_type": "altLabel",
+            "name": "AILS2(UE)"
+        },
+        "model": "vocabs.skoslabel",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:47.668Z",
+            "updated_at": "2018-10-10T09:29:47.668Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 86
+    },
+    {
+        "fields": {
+            "isoCode": "eng",
+            "label_type": "altLabel",
+            "name": "Introductory_Seminar_Linguistics(PS)"
+        },
+        "model": "vocabs.skoslabel",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "isoCode": "eng",
+            "label_type": "altLabel",
+            "name": "ILSS2(UE)"
+        },
+        "model": "vocabs.skoslabel",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "isoCode": "eng",
+            "label_type": "altLabel",
+            "name": "ILSS1(UE)"
+        },
+        "model": "vocabs.skoslabel",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "date_created": "2018-10-10T09:29:55.861Z",
+            "date_modified": "2018-10-10T09:29:55.861Z",
+            "dc_creator": "",
+            "dc_description": "",
+            "dc_description_lang": "en",
+            "dc_title": "course_type",
+            "dc_title_lang": "en",
+            "legacy_id": "",
+            "namespace": 1
+        },
+        "model": "vocabs.skosconceptscheme",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "namespace": "http://www.vocabs/provide-some-namespace/",
+            "prefix": "delt"
+        },
+        "model": "vocabs.skosnamespace",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2012-04-06",
+            "last_changed": "2012-04-06",
+            "legacy_id": "80",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 123
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:51.879Z",
+            "updated_at": "2018-10-10T09:29:51.993Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 123
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2012-04-06",
+            "last_changed": "2012-04-06",
+            "legacy_id": "79",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 122
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:51.751Z",
+            "updated_at": "2018-10-10T09:29:51.851Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 122
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2012-04-06",
+            "last_changed": "2012-04-06",
+            "legacy_id": "78",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 121
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:51.627Z",
+            "updated_at": "2018-10-10T09:29:51.727Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 121
+    },
+    {
+        "fields": {
+            "entered_by": 44,
+            "entered_date": "2012-03-09",
+            "last_changed": "2012-03-09",
+            "legacy_id": "77",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 120
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:51.515Z",
+            "updated_at": "2018-10-10T09:29:51.598Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 120
+    },
+    {
+        "fields": {
+            "entered_by": 44,
+            "entered_date": "2012-03-09",
+            "last_changed": "2012-03-09",
+            "legacy_id": "76",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 119
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:51.431Z",
+            "updated_at": "2018-10-10T09:29:51.493Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 119
+    },
+    {
+        "fields": {
+            "entered_by": 44,
+            "entered_date": "2012-03-09",
+            "last_changed": "2012-03-09",
+            "legacy_id": "75",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 118
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:51.339Z",
+            "updated_at": "2018-10-10T09:29:51.410Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 118
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:29:51.260Z",
+            "date_modified": "2018-10-10T09:29:56.280Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "course_type_45",
+            "other_label": [],
+            "pref_label": "Introductory_Sem_Cultural_Studies(PS)",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                1
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2011-05-23",
+            "last_changed": "2012-06-28",
+            "legacy_id": "74",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 117
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:51.222Z",
+            "updated_at": "2018-10-10T09:29:51.317Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 117
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2011-03-01",
+            "last_changed": "2011-03-01",
+            "legacy_id": "73",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 116
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:51.104Z",
+            "updated_at": "2018-10-10T09:29:51.199Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 116
+    },
+    {
+        "fields": {
+            "entered_by": 44,
+            "entered_date": "2010-11-22",
+            "last_changed": "2012-08-03",
+            "legacy_id": "72",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 115
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:50.999Z",
+            "updated_at": "2018-10-10T09:29:51.081Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 115
+    },
+    {
+        "fields": {
+            "entered_by": 44,
+            "entered_date": "2010-11-22",
+            "last_changed": "2012-08-03",
+            "legacy_id": "71",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 114
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:50.889Z",
+            "updated_at": "2018-10-10T09:29:50.973Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 114
+    },
+    {
+        "fields": {
+            "entered_by": 44,
+            "entered_date": "2010-11-22",
+            "last_changed": "2012-08-03",
+            "legacy_id": "70",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 113
+    },
+    {
+        "fields": {
+            "legacy_id": null,
+            "name": "Monika Boniecki"
+        },
+        "model": "assignments.person",
+        "pk": 44
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:50.774Z",
+            "updated_at": "2018-10-10T09:29:50.862Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 113
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2010-03-30",
+            "legacy_id": "69",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 112
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:50.656Z",
+            "updated_at": "2018-10-10T09:29:50.748Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 112
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2010-03-30",
+            "legacy_id": "68",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 111
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:50.534Z",
+            "updated_at": "2018-10-10T09:29:50.630Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 111
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2010-03-30",
+            "legacy_id": "67",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 110
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:50.409Z",
+            "updated_at": "2018-10-10T09:29:50.504Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 110
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2010-03-30",
+            "legacy_id": "66",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 109
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:50.262Z",
+            "updated_at": "2018-10-10T09:29:50.379Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 109
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2010-03-30",
+            "legacy_id": "65",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 108
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:50.095Z",
+            "updated_at": "2018-10-10T09:29:50.216Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 108
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2010-03-30",
+            "legacy_id": "64",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 107
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:50.005Z",
+            "updated_at": "2018-10-10T09:29:50.074Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 107
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2010-03-30",
+            "legacy_id": "63",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 106
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:49.922Z",
+            "updated_at": "2018-10-10T09:29:49.974Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 106
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2010-03-30",
+            "legacy_id": "62",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 105
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:49.797Z",
+            "updated_at": "2018-10-10T09:29:49.888Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 105
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "61",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 104
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:49.661Z",
+            "updated_at": "2018-10-10T09:29:49.765Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 104
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "60",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 103
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:49.536Z",
+            "updated_at": "2018-10-10T09:29:49.635Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 103
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "59",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 102
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:49.418Z",
+            "updated_at": "2018-10-10T09:29:49.514Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 102
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "58",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 101
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:49.302Z",
+            "updated_at": "2018-10-10T09:29:49.396Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 101
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "57",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 100
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:49.186Z",
+            "updated_at": "2018-10-10T09:29:49.280Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 100
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "56",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 99
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:49.068Z",
+            "updated_at": "2018-10-10T09:29:49.164Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 99
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "55",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 98
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:48.973Z",
+            "updated_at": "2018-10-10T09:29:49.048Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 98
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "54",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 97
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:48.879Z",
+            "updated_at": "2018-10-10T09:29:48.948Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 97
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "53",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 96
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:48.782Z",
+            "updated_at": "2018-10-10T09:29:48.859Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 96
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "52",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 95
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:48.691Z",
+            "updated_at": "2018-10-10T09:29:48.761Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 95
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "51",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 94
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:48.606Z",
+            "updated_at": "2018-10-10T09:29:48.673Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 94
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "50",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 93
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:48.523Z",
+            "updated_at": "2018-10-10T09:29:48.574Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 93
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "49",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 92
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:48.412Z",
+            "updated_at": "2018-10-10T09:29:48.507Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 92
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "48",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 91
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:48.280Z",
+            "updated_at": "2018-10-10T09:29:48.386Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 91
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "47",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 90
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:48.145Z",
+            "updated_at": "2018-10-10T09:29:48.253Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 90
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "46",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 89
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:48.009Z",
+            "updated_at": "2018-10-10T09:29:48.118Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 89
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-05-26",
+            "last_changed": "2009-05-26",
+            "legacy_id": "45",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 88
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:47.891Z",
+            "updated_at": "2018-10-10T09:29:47.984Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 88
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:29:47.766Z",
+            "date_modified": "2018-10-11T07:51:48.732Z",
+            "dc_creator": "",
+            "definition": "Advanced Integrated Language Skills 2 = English for Academic Purposes \u201cThe content and structure of this course, in particular its assignments, are conceived specifically for students who are working on a research paper (an MA thesis or a seminar paper) in the same semester\u201d (out of Vorlesungsverzeichnis)",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "course_type_9",
+            "other_label": [
+                4
+            ],
+            "pref_label": "Year3/4 English Language Class_B",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                1
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2009-04-21",
+            "last_changed": "2009-04-21",
+            "legacy_id": "44",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 87
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:47.731Z",
+            "updated_at": "2018-10-10T09:29:47.855Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 87
+    },
+    {
+        "fields": {
+            "entered_by": 86,
+            "entered_date": "2009-04-06",
+            "last_changed": "2009-04-06",
+            "legacy_id": "43",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 85
+    },
+    {
+        "fields": {
+            "legacy_id": null,
+            "name": "Veronika Schindelegger"
+        },
+        "model": "assignments.person",
+        "pk": 86
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:47.582Z",
+            "updated_at": "2018-10-10T09:29:47.698Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 85
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2008-08-26",
+            "legacy_id": "40",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 84
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:47.435Z",
+            "updated_at": "2018-10-10T09:29:47.546Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 84
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2008-08-26",
+            "legacy_id": "39",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 83
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:47.338Z",
+            "updated_at": "2018-10-10T09:29:47.410Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 83
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2008-08-26",
+            "legacy_id": "38",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 82
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:47.229Z",
+            "updated_at": "2018-10-10T09:29:47.317Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 82
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2008-08-26",
+            "legacy_id": "37",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 81
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:47.120Z",
+            "updated_at": "2018-10-10T09:29:47.207Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 81
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2008-08-26",
+            "legacy_id": "36",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 80
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:47.016Z",
+            "updated_at": "2018-10-10T09:29:47.100Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 80
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2008-08-26",
+            "legacy_id": "35",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 79
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:46.931Z",
+            "updated_at": "2018-10-10T09:29:46.991Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 79
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2008-08-26",
+            "legacy_id": "34",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 78
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:46.785Z",
+            "updated_at": "2018-10-10T09:29:46.911Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 78
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2008-08-26",
+            "legacy_id": "33",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 77
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:46.665Z",
+            "updated_at": "2018-10-10T09:29:46.745Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 77
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2008-08-26",
+            "legacy_id": "32",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 76
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:46.547Z",
+            "updated_at": "2018-10-10T09:29:46.631Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 76
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2008-08-26",
+            "legacy_id": "31",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 75
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:46.424Z",
+            "updated_at": "2018-10-10T09:29:46.517Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 75
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2008-08-26",
+            "legacy_id": "30",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 74
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:46.259Z",
+            "updated_at": "2018-10-10T09:29:46.393Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 74
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2010-10-18",
+            "legacy_id": "29",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 73
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:46.078Z",
+            "updated_at": "2018-10-10T09:29:46.211Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 73
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2008-08-26",
+            "legacy_id": "28",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 72
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:45.891Z",
+            "updated_at": "2018-10-10T09:29:46.042Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 72
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-26",
+            "last_changed": "2008-08-26",
+            "legacy_id": "27",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 71
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:45.800Z",
+            "updated_at": "2018-10-10T09:29:45.868Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 71
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-08-25",
+            "last_changed": "2008-08-25",
+            "legacy_id": "25",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 70
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:45.711Z",
+            "updated_at": "2018-10-10T09:29:45.785Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 70
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-07-14",
+            "last_changed": "2008-07-14",
+            "legacy_id": "24",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 69
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:45.597Z",
+            "updated_at": "2018-10-10T09:29:45.689Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 69
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-07-14",
+            "last_changed": "2008-07-14",
+            "legacy_id": "23",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 68
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:45.484Z",
+            "updated_at": "2018-10-10T09:29:45.570Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 68
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-07-14",
+            "last_changed": "2008-07-14",
+            "legacy_id": "22",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 67
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:45.346Z",
+            "updated_at": "2018-10-10T09:29:45.455Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 67
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-07-14",
+            "last_changed": "2008-07-14",
+            "legacy_id": "21",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 66
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:45.223Z",
+            "updated_at": "2018-10-10T09:29:45.317Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 66
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-07-14",
+            "last_changed": "2008-07-14",
+            "legacy_id": "20",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 65
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:45.069Z",
+            "updated_at": "2018-10-10T09:29:45.198Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 65
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-07-14",
+            "last_changed": "2008-07-14",
+            "legacy_id": "19",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 64
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:44.940Z",
+            "updated_at": "2018-10-10T09:29:45.018Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 64
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-06-18",
+            "last_changed": "2008-07-14",
+            "legacy_id": "18",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 63
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:44.759Z",
+            "updated_at": "2018-10-10T09:29:44.900Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 63
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-06-18",
+            "last_changed": "2008-06-18",
+            "legacy_id": "17",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 62
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:44.658Z",
+            "updated_at": "2018-10-10T09:29:44.733Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 62
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:29:44.582Z",
+            "date_modified": "2018-10-11T07:52:49.185Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "course_type_16",
+            "other_label": [
+                5
+            ],
+            "pref_label": "Introductory Seminar Linguistics",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                1
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-06-18",
+            "last_changed": "2008-06-18",
+            "legacy_id": "16",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 61
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:44.544Z",
+            "updated_at": "2018-10-10T09:29:44.635Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 61
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-05-15",
+            "last_changed": "2008-05-15",
+            "legacy_id": "15",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 60
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:44.431Z",
+            "updated_at": "2018-10-10T09:29:44.507Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 60
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-05-15",
+            "last_changed": "2008-05-15",
+            "legacy_id": "14",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 59
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:44.337Z",
+            "updated_at": "2018-10-10T09:29:44.405Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 59
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-05-15",
+            "last_changed": "2008-05-15",
+            "legacy_id": "13",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 58
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:44.241Z",
+            "updated_at": "2018-10-10T09:29:44.320Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 58
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-05-15",
+            "last_changed": "2008-05-15",
+            "legacy_id": "12",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 57
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:44.156Z",
+            "updated_at": "2018-10-10T09:29:44.223Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 57
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:29:44.043Z",
+            "date_modified": "2018-10-11T07:49:10.157Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "course_type_4",
+            "other_label": [
+                2
+            ],
+            "pref_label": "Year1 English Language Class_B",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                1
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-05-15",
+            "last_changed": "2008-05-15",
+            "legacy_id": "11",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 56
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:44.008Z",
+            "updated_at": "2018-10-10T09:29:44.132Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 56
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-05-06",
+            "last_changed": "2008-05-06",
+            "legacy_id": "10",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 55
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:43.873Z",
+            "updated_at": "2018-10-10T09:29:43.952Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 55
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-05-06",
+            "last_changed": "2008-05-06",
+            "legacy_id": "9",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 54
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:43.765Z",
+            "updated_at": "2018-10-10T09:29:43.835Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 54
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-05-06",
+            "last_changed": "2008-05-06",
+            "legacy_id": "8",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 53
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:43.647Z",
+            "updated_at": "2018-10-10T09:29:43.746Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 53
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-02-25",
+            "last_changed": "2008-02-25",
+            "legacy_id": "5",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 52
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:43.509Z",
+            "updated_at": "2018-10-10T09:29:43.622Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 52
+    },
+    {
+        "fields": {
+            "entered_by": null,
+            "entered_date": "2008-01-14",
+            "last_changed": "2008-01-21",
+            "legacy_id": "4",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 51
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:43.392Z",
+            "updated_at": "2018-10-10T09:29:43.484Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 51
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:29:43.281Z",
+            "date_modified": "2018-10-11T07:47:43.006Z",
+            "dc_creator": "",
+            "definition": "Integrated Language and Study Skills 1\r\n\r\nILSS Aims:\r\n- to upgrade your language and study skills, thereby providing support in an Englishmedium teaching environment \r\n- to encourage you to develop independent study habits (with regard to grammar, usage and\r\nvocabulary)\r\n- to identify and address deficiencies in your language competence\r\n\r\nOutcomes:\r\nYou should be equipped to meet the language demands of your courses in literature, linguistics and cultural and regional studies. Should the occasion arise, you would probably be able to follow higher education courses in the Englishspeaking world (in fields familiar to you) or work in some Englishmedium contexts without undue strain.\r\n\r\nFocus:\r\n- study and research skills\r\n- learning strategies\r\n- language awareness\r\n- vocabulary development\r\n- reading and writing skills and subskills\r\n- recognising and remedying errors in the use of the language system in writing and speaking\r\n- introduction to formal / informal distinction, levels of formality and the concept of appropriateness\r\n\r\nAssessment:\r\nThis will include attendance, active participation, class work, homework assignments and written tests on material covered. There is a Common Final Test (CFT) at the end of ILSS 2, modelled on the requirements for the International English Language Testing System (IELTS), Academic Module.",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "course_type_3",
+            "other_label": [
+                1
+            ],
+            "pref_label": "Year1 English Language Class_A",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                1
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-01-14",
+            "last_changed": "2008-02-25",
+            "legacy_id": "3",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 50
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:43.219Z",
+            "updated_at": "2018-10-10T09:29:43.367Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 50
+    },
+    {
+        "fields": {
+            "entered_by": null,
+            "entered_date": null,
+            "last_changed": "2012-08-03",
+            "legacy_id": "2",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 49
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:43.099Z",
+            "updated_at": "2018-10-10T09:29:43.180Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 49
+    },
+    {
+        "fields": {
+            "entered_by": null,
+            "entered_date": null,
+            "last_changed": "2012-08-03",
+            "legacy_id": "1",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 48
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:29:42.974Z",
+            "updated_at": "2018-10-10T09:29:43.053Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 48
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "10_Akademisches_Gymnasium_8A",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 12,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 123
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "10_Akademisches_Gymnasium_8B",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 12,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 122
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "10_Akademisches_Gymnasium_8C",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 12,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 121
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09_Akademisches_Gymnasium_8C",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 12,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 120
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09_Akademisches_Gymnasium_8B",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 12,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 119
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09_Akademisches_Gymnasium_8A",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 12,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 118
+    },
+    {
+        "fields": {
+            "course_description": "Cultural Studies",
+            "course_name": "08W_PSCULT_1",
+            "course_type": 5,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 2,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 117
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_EAP",
+            "course_type": 4,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": null,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 116
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL Project (data compiled by Julia H\u00fcttner & Angelika Rieder-B\u00fcnemann)",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 7,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 115
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL Project (data compiled by Julia H\u00fcttner & Angelika Rieder-B\u00fcnemann)",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 7,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 114
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL Project (data compiled by Julia H\u00fcttner & Angelika Rieder-B\u00fcnemann)",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 7,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 113
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_ILSS2_9",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 112
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_ILSS2_8",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 111
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_ILSS2_7",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 110
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_ILSS2_6",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 109
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_ILSS2_5",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 108
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_ILSS2_4",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 107
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_ILSS2_3",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 106
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_ILSS2_2",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 105
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_ILSS2_1",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 104
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_ILSS1_4",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 103
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_ILSS1_3",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 102
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_ILSS1_2",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 101
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "09S_ILSS1_1",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 100
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08W_ILSS1_12",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 99
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08W_ILSS1_11",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 98
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08W_ILSS1_10",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 97
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08W_ILSS1_09",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 96
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08W_ILSS1_08",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 95
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08W_ILSS1_07",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 94
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08W_ILSS1_06",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 93
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08W_ILSS1_05",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 92
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08W_ILSS1_04",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 91
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08W_ILSS1_03",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 90
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08W_ILSS1_02",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 89
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08W_ILSS1_01",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 88
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08W_EAP",
+            "course_type": 4,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": null,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 87
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08S_ILSS2_8",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 85
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_BG18_6A",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 10,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 84
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_HAK22_5C",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 13,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 83
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_HTL_5B",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 13,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 82
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_BG14_4E",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 8,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 81
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_HAK22_4C",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 12,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 80
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_WASS_3HTA",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 11,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 79
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_WASS_3HFB",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 11,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 78
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_WASS_3HFA",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 11,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 77
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_HAKLINZ_3A",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 11,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 76
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_BG14_3A",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 7,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 75
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_WASS_2HTA",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 10,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 74
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_BG14_2A",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 6,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 73
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_BG11_2A",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 6,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 72
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_BG18_2A",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 6,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 71
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL_LC_BG14_1A",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 5,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 70
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08S_ILSS2_7",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 69
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08S_ILSS2_6",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 68
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08S_ILSS2_5",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 67
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08S_ILSS2_4",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 66
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08S_ILSS2_3",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 65
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08S_ILSS2_2",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 64
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08S_ILSS2_1",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 63
+    },
+    {
+        "fields": {
+            "course_description": "Sociolinguistics",
+            "course_name": "07S_PSLING_2",
+            "course_type": 3,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 2,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 62
+    },
+    {
+        "fields": {
+            "course_description": "Second Language Acquisition",
+            "course_name": "07S_PSLING_1",
+            "course_type": 3,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 2,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 61
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "07S_ILSS2_5",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 60
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "07S_ILSS2_4",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 59
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "07S_ILSS2_3",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 58
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "07S_ILSS2_2",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 57
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "07S_ILSS2_1",
+            "course_type": 2,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 56
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08_Akademisches_Gymnasium_8A",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": 18,
+            "school_studies_year": 12,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 55
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08_Akademisches_Gymnasium_8C",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": 21,
+            "school_studies_year": 12,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 54
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "08_Akademisches_Gymnasium_8B",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": 16,
+            "school_studies_year": 12,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 53
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "07W_ILSS1_3",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": 21,
+            "school_studies_year": 1,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 52
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "07W_ILSS1_2",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": 18,
+            "school_studies_year": null,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 51
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "07W_ILSS1_1",
+            "course_type": 1,
+            "group_notes": null,
+            "participants_no": 23,
+            "school_studies_year": null,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 50
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL Project (data compiled by Julia H\u00fcttner & Angelika Rieder-B\u00fcnemann)",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 7,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 49
+    },
+    {
+        "fields": {
+            "course_description": null,
+            "course_name": "CLIL Project (data compiled by Julia H\u00fcttner & Angelika Rieder-B\u00fcnemann)",
+            "course_type": null,
+            "group_notes": null,
+            "participants_no": null,
+            "school_studies_year": 7,
+            "teacher_lecturer": null
+        },
+        "model": "assignments.coursegroup",
+        "pk": 48
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:38:03.181Z",
+            "updated_at": "2018-10-10T09:38:03.181Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 1128
+    },
+    {
+        "fields": {
+            "legacy_id": "1",
+            "name": null
+        },
+        "model": "assignments.institution",
+        "pk": 1128
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:30:22.839Z",
+            "updated_at": "2018-10-10T09:30:22.839Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 127
+    },
+    {
+        "fields": {
+            "date_created": "2018-10-10T09:30:18.995Z",
+            "date_modified": "2018-10-10T09:30:18.995Z",
+            "dc_creator": "",
+            "dc_description": "",
+            "dc_description_lang": "en",
+            "dc_title": "language",
+            "dc_title_lang": "en",
+            "legacy_id": "",
+            "namespace": 1
+        },
+        "model": "vocabs.skosconceptscheme",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:30:22.552Z",
+            "updated_at": "2018-10-10T09:30:22.552Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 125
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:30:23.033Z",
+            "date_modified": "2018-10-10T09:30:23.033Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "german",
+            "other_label": [],
+            "pref_label": "German",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                2
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 13
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:30:22.892Z",
+            "date_modified": "2018-10-10T09:30:22.892Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "croatian",
+            "other_label": [],
+            "pref_label": "Croatian",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                2
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 12
+    },
+    {
+        "fields": {
+            "legacy_id": "14",
+            "name": null
+        },
+        "model": "assignments.place",
+        "pk": 127
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-01-22",
+            "last_changed": "2008-01-22",
+            "legacy_id": "2",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 126
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:30:22.792Z",
+            "updated_at": "2018-10-10T09:30:23.082Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 126
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:30:22.699Z",
+            "date_modified": "2018-10-10T09:30:22.699Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "slovenian",
+            "other_label": [],
+            "pref_label": "Slovenian",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                2
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 11
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:30:22.583Z",
+            "date_modified": "2018-10-10T09:30:22.583Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "bosnian",
+            "other_label": [],
+            "pref_label": "Bosnian",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                2
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 10
+    },
+    {
+        "fields": {
+            "legacy_id": "27",
+            "name": null
+        },
+        "model": "assignments.place",
+        "pk": 125
+    },
+    {
+        "fields": {
+            "gender": "female",
+            "lang_father": 12,
+            "lang_l": 12,
+            "lang_mother": 12,
+            "lang_second": 13,
+            "lang_third": null,
+            "nationality": 127,
+            "year_of_birth": 1988
+        },
+        "model": "assignments.learner",
+        "pk": 126
+    },
+    {
+        "fields": {
+            "gender": "female",
+            "lang_father": 10,
+            "lang_l": 10,
+            "lang_mother": 10,
+            "lang_second": 11,
+            "lang_third": null,
+            "nationality": 125,
+            "year_of_birth": 1986
+        },
+        "model": "assignments.learner",
+        "pk": 124
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-01-22",
+            "last_changed": "2008-03-13",
+            "legacy_id": "3",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 616
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:33:23.110Z",
+            "updated_at": "2018-10-10T09:36:31.067Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 616
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-01-22",
+            "last_changed": "2008-05-09",
+            "legacy_id": "1",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 615
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:33:23.023Z",
+            "updated_at": "2018-10-10T09:36:31.013Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 615
+    },
+    {
+        "fields": {
+            "abroad_english_desc": "2006 - 3 weeks - Dublin/Ireland - school/language school\r\n\r\n2007 - 2 months - Dublin/Ireland - vacation/visiting friends",
+            "abroad_english_school": 3,
+            "abroad_english_studies": null,
+            "abroad_english_total": 11,
+            "abroad_english_vacation": 8,
+            "abroad_english_work": null,
+            "clil_subjects_learner_profile": null,
+            "clil_years_learner_profile": null,
+            "english_other": null,
+            "english_school": 22,
+            "english_university": 1,
+            "lang_instruction_primary": 13,
+            "lang_instruction_secondary": 13,
+            "lang_spoken_home": "Croation: 50%\r\nGerman: 50%",
+            "learner_id": [
+                126
+            ],
+            "proficiency_level": "B2",
+            "proficiency_test": null,
+            "proficiency_test_year": 2007,
+            "school_year": null,
+            "studies_semester": 1,
+            "year": 2007
+        },
+        "model": "assignments.learnerprofile",
+        "pk": 616
+    },
+    {
+        "fields": {
+            "abroad_english_desc": "-",
+            "abroad_english_school": null,
+            "abroad_english_studies": null,
+            "abroad_english_total": 0,
+            "abroad_english_vacation": null,
+            "abroad_english_work": null,
+            "clil_subjects_learner_profile": null,
+            "clil_years_learner_profile": null,
+            "english_other": null,
+            "english_school": 16,
+            "english_university": 3,
+            "lang_instruction_primary": 11,
+            "lang_instruction_secondary": 11,
+            "lang_spoken_home": "Bosnian: 50%\r\nSlovenian: 50%",
+            "learner_id": [
+                124
+            ],
+            "proficiency_level": "B2",
+            "proficiency_test": null,
+            "proficiency_test_year": 2007,
+            "school_year": null,
+            "studies_semester": 3,
+            "year": 2007
+        },
+        "model": "assignments.learnerprofile",
+        "pk": 615
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:30:39.699Z",
+            "updated_at": "2018-10-10T09:30:39.699Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 331
+    },
+    {
+        "fields": {
+            "entered_by": 44,
+            "entered_date": "2012-04-27",
+            "last_changed": "2012-04-27",
+            "legacy_id": "568",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 1126
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:34:05.870Z",
+            "updated_at": "2018-10-10T09:37:04.259Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 1126
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:30:23.948Z",
+            "date_modified": "2018-10-10T09:30:23.948Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "hungarian",
+            "other_label": [],
+            "pref_label": "Hungarian",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                2
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 15
+    },
+    {
+        "fields": {
+            "legacy_id": "92",
+            "name": null
+        },
+        "model": "assignments.place",
+        "pk": 331
+    },
+    {
+        "fields": {
+            "entered_by": 44,
+            "entered_date": "2012-04-27",
+            "last_changed": "2012-05-25",
+            "legacy_id": "484",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 614
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:31:03.057Z",
+            "updated_at": "2018-10-10T09:31:03.120Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 614
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:38:07.008Z",
+            "updated_at": "2018-10-10T09:38:07.008Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 1189
+    },
+    {
+        "fields": {
+            "entered_by": 44,
+            "entered_date": "2012-04-27",
+            "last_changed": "2012-04-27",
+            "legacy_id": "567",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 1125
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:34:05.798Z",
+            "updated_at": "2018-10-10T09:37:04.192Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 1125
+    },
+    {
+        "fields": {
+            "entered_by": 44,
+            "entered_date": "2012-04-27",
+            "last_changed": "2012-04-27",
+            "legacy_id": "483",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 613
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:31:02.986Z",
+            "updated_at": "2018-10-10T09:31:03.037Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 613
+    },
+    {
+        "fields": {
+            "abroad_english_desc": "2009 - 2 weeks - Malta - to study English",
+            "abroad_english_school": 2,
+            "abroad_english_studies": null,
+            "abroad_english_total": 2,
+            "abroad_english_vacation": null,
+            "abroad_english_work": null,
+            "clil_subjects_learner_profile": null,
+            "clil_years_learner_profile": null,
+            "english_other": null,
+            "english_school": 16,
+            "english_university": null,
+            "lang_instruction_primary": 13,
+            "lang_instruction_secondary": 13,
+            "lang_spoken_home": "Hungarian: 100%",
+            "learner_id": [
+                614
+            ],
+            "proficiency_level": null,
+            "proficiency_test": null,
+            "proficiency_test_year": 12,
+            "school_year": null,
+            "studies_semester": null,
+            "year": 2010
+        },
+        "model": "assignments.learnerprofile",
+        "pk": 1126
+    },
+    {
+        "fields": {
+            "gender": "female",
+            "lang_father": 15,
+            "lang_l": 15,
+            "lang_mother": 15,
+            "lang_second": 13,
+            "lang_third": null,
+            "nationality": 331,
+            "year_of_birth": 1991
+        },
+        "model": "assignments.learner",
+        "pk": 614
+    },
+    {
+        "fields": {
+            "entered_by": 44,
+            "entered_date": "2012-04-27",
+            "last_changed": "2012-04-27",
+            "legacy_id": "629",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 1755
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:38:47.572Z",
+            "updated_at": "2018-10-10T09:38:47.648Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 1755
+    },
+    {
+        "fields": {
+            "legacy_id": "6",
+            "name": null
+        },
+        "model": "assignments.institution",
+        "pk": 1189
+    },
+    {
+        "fields": {
+            "abroad_english_desc": "2007 - 1 month - Folrida, USA - language course",
+            "abroad_english_school": 4,
+            "abroad_english_studies": null,
+            "abroad_english_total": 4,
+            "abroad_english_vacation": null,
+            "abroad_english_work": null,
+            "clil_subjects_learner_profile": null,
+            "clil_years_learner_profile": null,
+            "english_other": null,
+            "english_school": 16,
+            "english_university": null,
+            "lang_instruction_primary": 13,
+            "lang_instruction_secondary": 13,
+            "lang_spoken_home": "German: 100%",
+            "learner_id": [
+                613
+            ],
+            "proficiency_level": null,
+            "proficiency_test": null,
+            "proficiency_test_year": 12,
+            "school_year": null,
+            "studies_semester": null,
+            "year": 2010
+        },
+        "model": "assignments.learnerprofile",
+        "pk": 1125
+    },
+    {
+        "fields": {
+            "gender": "female",
+            "lang_father": 13,
+            "lang_l": 13,
+            "lang_mother": 13,
+            "lang_second": null,
+            "lang_third": null,
+            "nationality": 127,
+            "year_of_birth": 1991
+        },
+        "model": "assignments.learner",
+        "pk": 613
+    },
+    {
+        "fields": {
+            "entered_by": 44,
+            "entered_date": "2012-04-27",
+            "last_changed": "2012-05-11",
+            "legacy_id": "628",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 1754
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:38:47.444Z",
+            "updated_at": "2018-10-10T09:38:47.554Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 1754
+    },
+    {
+        "fields": {
+            "clil": "no",
+            "group_id": null,
+            "institution_id": 1189,
+            "institution_level": "US",
+            "learner_id": 614,
+            "learner_profile_id": 1126
+        },
+        "model": "assignments.participant",
+        "pk": 1755
+    },
+    {
+        "fields": {
+            "clil": "no",
+            "group_id": null,
+            "institution_id": 1189,
+            "institution_level": "US",
+            "learner_id": 613,
+            "learner_profile_id": 1125
+        },
+        "model": "assignments.participant",
+        "pk": 1754
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:39:17.950Z",
+            "updated_at": "2018-10-10T09:39:17.950Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 1759
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-01-23",
+            "last_changed": "2008-05-06",
+            "legacy_id": "2",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 1129
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:38:03.226Z",
+            "updated_at": "2018-10-10T09:38:03.269Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 1129
+    },
+    {
+        "fields": {
+            "date_created": "2018-10-10T09:39:16.739Z",
+            "date_modified": "2018-10-10T09:39:16.739Z",
+            "dc_creator": "",
+            "dc_description": "",
+            "dc_description_lang": "en",
+            "dc_title": "text_mode",
+            "dc_title_lang": "en",
+            "legacy_id": "",
+            "namespace": 1
+        },
+        "model": "vocabs.skosconceptscheme",
+        "pk": 7
+    },
+    {
+        "fields": {
+            "date_created": "2018-10-10T09:39:16.714Z",
+            "date_modified": "2018-10-10T09:39:16.714Z",
+            "dc_creator": "",
+            "dc_description": "",
+            "dc_description_lang": "en",
+            "dc_title": "data_type",
+            "dc_title_lang": "en",
+            "legacy_id": "",
+            "namespace": 1
+        },
+        "model": "vocabs.skosconceptscheme",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "date_created": "2018-10-10T09:39:16.697Z",
+            "date_modified": "2018-10-10T09:39:16.697Z",
+            "dc_creator": "",
+            "dc_description": "",
+            "dc_description_lang": "en",
+            "dc_title": "text_medium",
+            "dc_title_lang": "en",
+            "legacy_id": "",
+            "namespace": 1
+        },
+        "model": "vocabs.skosconceptscheme",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "date_created": "2018-10-10T09:39:16.678Z",
+            "date_modified": "2018-10-10T09:39:16.678Z",
+            "dc_creator": "",
+            "dc_description": "",
+            "dc_description_lang": "en",
+            "dc_title": "text_type",
+            "dc_title_lang": "en",
+            "legacy_id": "",
+            "namespace": 1
+        },
+        "model": "vocabs.skosconceptscheme",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-01-23",
+            "last_changed": "2011-04-04",
+            "legacy_id": "1",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 1127
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:38:03.157Z",
+            "updated_at": "2018-10-10T09:38:03.210Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 1127
+    },
+    {
+        "fields": {
+            "legacy_id": null,
+            "name": "Schiftner"
+        },
+        "model": "assignments.person",
+        "pk": 1759
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:39:17.886Z",
+            "date_modified": "2018-10-11T08:00:12.867Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "text_type_4",
+            "other_label": [],
+            "pref_label": "Essay",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                3
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 72
+    },
+    {
+        "fields": {
+            "clil": "no",
+            "group_id": null,
+            "institution_id": 1128,
+            "institution_level": "TU",
+            "learner_id": 126,
+            "learner_profile_id": 616
+        },
+        "model": "assignments.participant",
+        "pk": 1129
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-01-23",
+            "last_changed": "2008-01-23",
+            "legacy_id": "4",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 1758
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:39:17.851Z",
+            "updated_at": "2018-10-10T09:39:17.983Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 1758
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:39:17.805Z",
+            "date_modified": "2018-10-10T09:39:17.805Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "expository",
+            "other_label": [],
+            "pref_label": "expository",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                7
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 71
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:39:17.773Z",
+            "date_modified": "2018-10-10T09:39:17.773Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "clinically_elicited",
+            "other_label": [],
+            "pref_label": "clinically_elicited",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                5
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 70
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:39:17.745Z",
+            "date_modified": "2018-10-10T09:39:17.745Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "written",
+            "other_label": [],
+            "pref_label": "written",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                4
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 69
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:39:17.716Z",
+            "date_modified": "2018-10-10T09:39:17.716Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "25",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "",
+            "other_label": [],
+            "pref_label": "",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                2
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 68
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:39:17.615Z",
+            "date_modified": "2018-10-11T08:03:18.491Z",
+            "dc_creator": "",
+            "definition": "",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "text_type_13",
+            "other_label": [],
+            "pref_label": "Summary",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                3
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 67
+    },
+    {
+        "fields": {
+            "clil": "no",
+            "group_id": null,
+            "institution_id": 1128,
+            "institution_level": "TU",
+            "learner_id": 124,
+            "learner_profile_id": 615
+        },
+        "model": "assignments.participant",
+        "pk": 1127
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-01-23",
+            "last_changed": "2008-04-29",
+            "legacy_id": "2",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 1757
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:39:17.535Z",
+            "updated_at": "2018-10-10T09:39:17.836Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 1757
+    },
+    {
+        "fields": {
+            "assignment_id": 5,
+            "availability": "yes",
+            "clil_subject": null,
+            "clil_text": "no",
+            "data_type": 70,
+            "exam": "no",
+            "grade": null,
+            "lang": 68,
+            "medium": 69,
+            "mode": 71,
+            "participant_id": 1129,
+            "planning_time": "unknown",
+            "recoding_method": null,
+            "recording": null,
+            "semester": "W",
+            "source": "hw_manuscript",
+            "text_type": 72,
+            "timed": "yes",
+            "title": "",
+            "tool": "unknown",
+            "transcriber": 1759,
+            "year": 2007
+        },
+        "model": "assignments.text",
+        "pk": 1758
+    },
+    {
+        "fields": {
+            "assignment_id": 3,
+            "availability": "yes",
+            "clil_subject": null,
+            "clil_text": "yes",
+            "data_type": 70,
+            "exam": "no",
+            "grade": null,
+            "lang": 68,
+            "medium": 69,
+            "mode": 71,
+            "participant_id": 1127,
+            "planning_time": "unknown",
+            "recoding_method": null,
+            "recording": null,
+            "semester": "W",
+            "source": "born_digital",
+            "text_type": 67,
+            "timed": "no",
+            "title": "",
+            "tool": "unknown",
+            "transcriber": null,
+            "year": 2007
+        },
+        "model": "assignments.text",
+        "pk": 1757
+    },
+    {
+        "fields": {
+            "date_created": "2018-10-10T09:46:17.026Z",
+            "date_modified": "2018-10-10T09:46:17.026Z",
+            "dc_creator": "",
+            "dc_description": "",
+            "dc_description_lang": "en",
+            "dc_title": "text_status",
+            "dc_title_lang": "en",
+            "legacy_id": "",
+            "namespace": 1
+        },
+        "model": "vocabs.skosconceptscheme",
+        "pk": 8
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:46:18.380Z",
+            "date_modified": "2018-10-10T09:50:11.364Z",
+            "dc_creator": "",
+            "definition": "The transcription of a handwritten document. The \"text_content\" contains a copy of the transcription into the memo field, which is encoded according to the DELT encoding schema.\r\n\r\n\r\n\r\nXxx --> representation  of omitted names",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "TEXT_STATUS_ID_12",
+            "other_label": [],
+            "pref_label": "TM_transcription_markup",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                8
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 98
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-01-23",
+            "last_changed": "2012-03-09",
+            "legacy_id": "2",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 3436
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:46:18.348Z",
+            "updated_at": "2018-10-10T09:46:18.419Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 3436
+    },
+    {
+        "fields": {
+            "broader_concept": null,
+            "collection": [],
+            "date_created": "2018-10-10T09:46:18.311Z",
+            "date_modified": "2018-10-10T09:50:11.174Z",
+            "dc_creator": "",
+            "definition": "The original digital file. The \"text_content\" contains a copy of the original into the memo field, which is encoded according to the DELT encoding schema.\r\n\r\n\r\n\r\nXxx --> representation  of omitted names",
+            "definition_lang": "en",
+            "legacy_id": "",
+            "name_reverse": "",
+            "namespace": 1,
+            "notation": "TEXT_STATUS_ID_2",
+            "other_label": [],
+            "pref_label": "OM_original_markup",
+            "pref_label_lang": "en",
+            "same_as_external": "",
+            "scheme": [
+                8
+            ],
+            "skos_broader": [],
+            "skos_broadmatch": [],
+            "skos_changenote": "",
+            "skos_closematch": [],
+            "skos_editorialnote": "",
+            "skos_exactmatch": [],
+            "skos_example": "",
+            "skos_historynote": "",
+            "skos_narrower": [],
+            "skos_narrowmatch": [],
+            "skos_note": "",
+            "skos_note_lang": "en",
+            "skos_related": [],
+            "skos_relatedmatch": [],
+            "skos_scopenote": "",
+            "skos_scopenote_lang": "en",
+            "source_description": "",
+            "top_concept": false
+        },
+        "model": "vocabs.skosconcept",
+        "pk": 97
+    },
+    {
+        "fields": {
+            "entered_by": 2,
+            "entered_date": "2008-01-23",
+            "last_changed": "2012-03-23",
+            "legacy_id": "1",
+            "notes": null
+        },
+        "model": "assignments.assignmentbaseclass",
+        "pk": 3435
+    },
+    {
+        "fields": {
+            "created_at": "2018-10-10T09:46:18.254Z",
+            "updated_at": "2018-10-10T09:46:18.337Z"
+        },
+        "model": "idprovider.idprovider",
+        "pk": 3435
+    },
+    {
+        "fields": {
+            "content": "<p>Actually, I haven't asked myself this question before. Maybe this is not a good sentence to start it all, but it is a good point to start thinking about how it all has started. </p>\r\n\r\n<p>When I had my first english lesson, years ago, I was surprised, how interesting it was to talk in an other language. It was just something new, a rather new and funny experience at the age of 9. </p>\r\n\r\n<p>We had this funny books called \"Doodie\" and from this time on I got more and more interested into this language. </p>\r\n\r\n<p>Everybody told me, I am a \"speaker\". And somehow I knew that. I grew up with <unclear>cratan</unclear>, german and english and as I grew, my hobbies and interests did too. Some years later, at a higher level, my english class went to Ireland. I enjoyed the time there and also got more and more interested with literature and culture. In Ireland I decided to study english and german. There I saw what I really want. Not only that I fell in love with a country and their culture, past and history, also I knew that what I really want <unclear>it</unclear> how to teach and how I can improve my language. I wanted to learn how far I can go, this is what I am still doing. And now, here at the university. I also travel around a lot. Mostly to Ireland and the UK, but also to Croatia, Italy, Spain. I also prefer reading in English, would it be magazines, newspaper or books, I enjoy it. My favourite writers are Oscar Wilde, Frank McCourt and James Joyce, the last book I read was \"The Portrait of the Artist as a young man\" which I found was very interesting. I really love it how Joyce plays with words, it's gorgeous. I would never dare to write something like that, because I think that it would be rather bad. Actually, I haven't tried to write something poetical yet, but who knows, maybe one day. </p>\r\n\r\n<p>What I am expecting from this course is to improve my english and maybe also to show me how to use words correctly. </p>\r\n\r\n<p>I have so many ideas which I would really like to write them down, but I don't know how to do that, how to express myself in the correct way. There's a lot to learn, and a lot of what I want. Two years ago my german teacher showed me that there is a lot more in me that I have ever expected, maybe this is also why I am sitting here. </p>\r\n\r\n<p>I am really glad studying english and german here and I am really looking forward to the future. </p>\r\n\r\n<p>And I also guess that this is the worst text I've ever written about the fact why I study English. </p>",
+            "link": "",
+            "status": 98,
+            "text_id": [
+                1758
+            ]
+        },
+        "model": "assignments.textversion",
+        "pk": 3436
+    },
+    {
+        "fields": {
+            "content": "<p>The main strategy and secret for efficacious and successful studying is he time management; how students organise their time on study and free time during a school year. </p>\r\n\r\n<p>To distinguish what is important in tasks you deal with, helps you to take control over your work. </p>\r\n\r\n<p>The strategy of resolving the problems, approaching to the tasks controls your learning capability which brings you successive results. </p>\r\n\r\n<p>To create the plan that fits you is very important and you should always stick to it. </p>\r\n\r\n<p>Spending hours and hours on an intensive study without any plan and timetable usually will not bring a result you had in your vision at the beginning of your study. </p>\r\n\r\n<p>Without a plan you are not able to divide time you should spend on your study and your basic human needs. You never know what it is important in tasks you are dealing with. </p>\r\n\r\n<p>Where is the limit to achieve the goal you intended to? With no control over your work you will never know. </p>",
+            "link": "",
+            "status": 97,
+            "text_id": [
+                1757
+            ]
+        },
+        "model": "assignments.textversion",
+        "pk": 3435
+    }
+]

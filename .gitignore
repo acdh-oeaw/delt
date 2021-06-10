@@ -42,4 +42,3 @@ delt/settings/local.py
 excel-export
 nations.csv
 *.zip
-dump.json
