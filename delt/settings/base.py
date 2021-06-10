@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'assignments',
     'charts',
     'shibboleth',
-    'fixture_magic',
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap3"
